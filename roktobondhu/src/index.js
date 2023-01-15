@@ -9,6 +9,7 @@ import Blogs_Details from "./components/Blogs/Blogs_Details";
 import Anuperona from "./components/Blogs/Anuperona";
 import Blogs from "./Pages/Blog";
 import Sohojogi from "./Pages/Sohojogi";
+import Blog from "./Pages/Blog";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/blogs",
     element: <Blogs />,
+  },
+  {
+    path: "/blog",
+    element: <Blog />,
   },
   {
     path: "/sohojogi",
