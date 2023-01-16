@@ -24,7 +24,7 @@ const NavbarBlog = () => {
                         
                     </ul>
                     </div>
-                    <Link className=""><img className='w-60 h-auto p-5 mx-20' src={LogoBlog} alt="Logo"/></Link>
+                    <Link to="/" className=""><img className='w-60 h-auto p-5 mx-20' src={LogoBlog} alt="Logo"/></Link>
                 </div>
                 <div className="text-sm navbar-end mx-20 w-full p-3  hidden lg:flex">
                     <ul className=" menu menu-horizontal  text-red-500 font-bold">
