@@ -1,6 +1,6 @@
 import React from "react";
 import Blogs from "../components/Blogs";
-import NavbarBlog from "./NavbarBlog";
+import NavbarBlog from "../Pages/Navbar/NavbarBlog/NavbarBlog";
 
 const Blog = () => {
   return <div>
