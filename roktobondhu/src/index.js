@@ -1,18 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./App";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
 
-import Blogs_Details from "./components/Blogs/Blogs_Details";
 import Anuperona from "./components/Blogs/Anuperona";
+import Blogs_Details from "./components/Blogs/Blogs_Details";
 import Blogs from "./Pages/Blog";
 import Sohojogi from "./Pages/Sohojogi";
+import Thalassemia from "./Pages/Thalassemia";
+import ThalassemiaDetails from "./Pages/ThalassemiaDetails";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/thalassemia",
+    element: <Thalassemia />,
+  },
+  {
+    path: "/thalassemia-details",
+    element: <ThalassemiaDetails />,
   },
   {
     path: "/blogs",
