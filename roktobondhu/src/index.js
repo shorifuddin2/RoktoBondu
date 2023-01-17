@@ -5,7 +5,7 @@ import App from "./App";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import Kobitas from "./components/Blogs/Kobita/Kobitas";
-import Campaign from "./components/Blogs/Campaign/Campaign";
+import Campaigns from "./components/Blogs/Campaign/Campaigns";
 import Anuperona from "./components/Blogs/Anuperona";
 import Blogs_Details from "./components/Blogs/Blogs_Details";
 import Blogs from "./Pages/Blog";
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/blogs/campaign',
-    element: <Campaign/>
+    element: <Campaigns/>
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
