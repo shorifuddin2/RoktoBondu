@@ -145,7 +145,7 @@ const PlateletReg = () => {
                                     </div>
                                     <div className='mt-4 mb-5'>
                                     <label className='custom-select icon-upper icon-down'>
-                                        <select className='platelet-group pl-2 border rounded text-black lg:w-full lg:h-10 md:w-full sm:w-64 sm:h-10'>
+                                        <select className='platelet-group pl-2 border rounded text-black lg:w-[572px] lg:h-10 md:w-full sm:w-64 sm:h-10'>
                                         <option>A+</option>
                                         <option>A-</option>
                                         <option>B+</option>
@@ -164,7 +164,7 @@ const PlateletReg = () => {
                                     <div className='mt-4 mb-5 flex'>
                                         <div>
                                             <label className='custom-select icon-upper icon-down'>
-                                            <select className='platelet-group pl-2 border rounded text-black lg:w-full lg:h-10 md:w-full sm:w-24 sm:h-10'>
+                                            <select className='platelet-group pl-2 border rounded text-black  lg:w-[190px] lg:h-10 md:w-full sm:w-24 sm:h-10'>
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
@@ -201,7 +201,7 @@ const PlateletReg = () => {
                                         </div>
                                         <div>
                                             <label className='custom-select icon-upper icon-down'>
-                                            <select className='platelet-group pl-2 border rounded text-black lg:w-full lg:h-10 md:w-full sm:w-24 sm:h-10' >
+                                            <select className='platelet-group pl-2 border rounded text-black lg:w-[190px] lg:h-10 md:w-full sm:w-24 sm:h-10' >
                                                 <option>January</option>
                                                 <option>February</option>
                                                 <option>March</option>
@@ -216,7 +216,7 @@ const PlateletReg = () => {
                                         </div>
                                         <div>
                                             <label className='custom-select icon-upper icon-down'>
-                                            <select className='platelet-group pl-2 border rounded text-black lg:w-full lg:h-10 md:w-full sm:w-24 sm:h-10'>
+                                            <select className='platelet-group pl-2 border rounded text-black lg:w-[190px] lg:h-10 md:w-full sm:w-24 sm:h-10'>
                                                 <option>2017</option>
                                                 <option>2018</option>
                                                 <option>2019</option>
