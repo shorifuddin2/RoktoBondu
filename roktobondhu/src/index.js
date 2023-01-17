@@ -11,10 +11,20 @@ import Blogs from "./Pages/Blog";
 import Sohojogi from "./Pages/Sohojogi";
 import Thalassemia from "./Pages/Thalassemia";
 import ThalassemiaDetails from "./Pages/ThalassemiaDetails";
+import Login from "./Pages/Login";
+import Registration from "./Pages/Registration";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/login",
+    element: <Login></Login>,
+  },
+  {
+    path: "/registration",
+    element: <Registration></Registration>,
   },
   {
     path: "/thalassemia",
