@@ -4,7 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-
+import Kobitas from "./components/Blogs/Kobita/Kobitas";
+import Campaign from "./components/Blogs/Campaign/Campaign";
 import Anuperona from "./components/Blogs/Anuperona";
 import Blogs_Details from "./components/Blogs/Blogs_Details";
 import Blogs from "./Pages/Blog";
@@ -50,6 +51,14 @@ const router = createBrowserRouter([
     path: "/blogs/:id",
     element: <Blogs_Details />,
   },
+  {
+    path: '/blogs/কবিতা',
+    element: <Kobitas/>
+  },
+  {
+    path: '/blogs/campaign',
+    element: <Campaign/>
+  }
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
