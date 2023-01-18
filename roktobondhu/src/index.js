@@ -1,43 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App";
 import "./index.css";
+import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import Kobitas from "./components/Blogs/Kobita/Kobitas";
-import Campaigns from "./components/Blogs/Campaign/Campaigns";
-import Anuperona from "./components/Blogs/Anuperona";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import Blogs_Details from "./components/Blogs/Blogs_Details";
+import Anuperona from "./components/Blogs/Anuperona";
 import Blogs from "./Pages/Blog";
 import Sohojogi from "./Pages/Sohojogi";
-import Thalassemia from "./Pages/Thalassemia";
-import ThalassemiaDetails from "./Pages/ThalassemiaDetails";
-import Login from "./Pages/Login";
-import Registration from "./Pages/Registration";
+import Blog from "./Pages/Blog";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
   },
   {
-    path: "/login",
-    element: <Login></Login>,
-  },
-  {
-    path: "/registration",
-    element: <Registration></Registration>,
-  },
-  {
-    path: "/thalassemia",
-    element: <Thalassemia />,
-  },
-  {
-    path: "/thalassemia-details",
-    element: <ThalassemiaDetails />,
-  },
-  {
     path: "/blogs",
     element: <Blogs />,
+  },
+  {
+    path: "/blog",
+    element: <Blog />,
   },
   {
     path: "/sohojogi",
@@ -51,14 +35,6 @@ const router = createBrowserRouter([
     path: "/blogs/:id",
     element: <Blogs_Details />,
   },
-  {
-    path: '/blogs/কবিতা',
-    element: <Kobitas/>
-  },
-  {
-    path: '/blogs/campaign',
-    element: <Campaigns/>
-  }
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
