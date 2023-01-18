@@ -14,6 +14,11 @@ import Thalassemia from "./Pages/Thalassemia";
 import ThalassemiaDetails from "./Pages/ThalassemiaDetails";
 import Login from "./Pages/Login";
 import Registration from "./Pages/Registration";
+import Volunteers from "./Pages/Volunteers/Volunteers";
+import GalleryBlog from "./Pages/GalleryBlog/GalleryBlog";
+import GalleryBlogDetails from "./Pages/GalleryBlog/GalleryBlogDetails";
+import NewsBlog from "./Pages/NewsBlog/NewsBlog";
+import NewsBlogDetails from "./Pages/NewsBlog/NewsBlogDetails";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,12 +37,16 @@ const router = createBrowserRouter([
     element: <Thalassemia />,
   },
   {
+    path: "/volunteers",
+    element: <Volunteers />,
+  },
+  {
     path: "/thalassemia-details",
     element: <ThalassemiaDetails />,
   },
   {
     path: "/blogs",
-    element: <Blogs />,
+    element: <Blogs />
   },
   {
     path: "/sohojogi",
@@ -53,11 +62,27 @@ const router = createBrowserRouter([
   },
   {
     path: '/blogs/কবিতা',
-    element: <Kobitas/>
+    element: <Kobitas />
   },
   {
     path: '/blogs/campaign',
-    element: <Campaigns/>
+    element: <Campaigns />
+  },
+  {
+    path: '/blogs/রক্তবন্ধু-গ্যালারি',
+    element: <GalleryBlog />
+  },
+  {
+    path: '/blogs/রক্তবন্ধু-গ্যালারি/:id',
+    element: <GalleryBlogDetails />
+  },
+  {
+    path: '/blogs/সংবাদ',
+    element: <NewsBlog />
+  },
+  {
+    path: '/blogs/সংবাদ/:id',
+    element: <NewsBlogDetails />
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));

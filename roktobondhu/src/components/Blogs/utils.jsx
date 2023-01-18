@@ -29,10 +29,10 @@ export const bloggbtn = [
   },
   {
     btnText: "রক্তবন্ধু গ্যালারি",
-    link: "anuperona",
+    link: "রক্তবন্ধু-গ্যালারি",
   },
   {
     btnText: "সংবাদ",
-    link: "anuperona",
+    link: "সংবাদ",
   },
 ];
