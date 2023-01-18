@@ -9,7 +9,7 @@ export const bloggbtn = [
   },
   {
     btnText: "ক্যাম্পেইন নিউজ",
-    link: "campaign",
+    link: "campaigns",
   },
   {
     btnText: "প্রথম রক্তদান",

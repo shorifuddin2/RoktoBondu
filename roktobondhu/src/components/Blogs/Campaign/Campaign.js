@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+// import ReactDOM from 'react-dom';
+// import ReactPaginate from 'react-paginate';
 
 const Campaign = ({ campaign }) => {
     const navigate = useNavigate();
@@ -18,7 +20,7 @@ const Campaign = ({ campaign }) => {
                     <p className=" text-[#212529] leading-6 text-[14px] mt-3">{desc.slice(0, 130)}</p>
                 </div>
 
-                <button onClick={() => navigate(`/blogs/${id}`)} className="border text-lg font-semibold p-2 mb-3
+                <button onClick={() => navigate(`/blogs/campaign/${id}`)} className="border text-lg font-semibold p-2 mb-3
             hover:bg-black rounded-full py-2 text-white px-6 mx-8 bg-red-600 absolute bottom-3"
                 >
                     বিস্তারিত দেখুন...

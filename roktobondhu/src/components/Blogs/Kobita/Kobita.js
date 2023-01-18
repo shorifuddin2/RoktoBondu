@@ -16,7 +16,7 @@ const Kobita = ({ poem }) => {
                 </h5>
                 <p className=" text-[#212529] leading-6 text-[14px] mt-3">{desc}</p>
             </div>
-            <button onClick={() => navigate(`/blogs/${id}`)} className="border text-lg font-semibold p-2 mb-3
+            <button onClick={() => navigate(`/blogs/poem/${id}`)} className="border text-lg font-semibold p-2 mb-3
              hover:bg-black rounded-full py-2 text-white px-6 mx-8 bg-red-600"
             >
                 বিস্তারিত দেখুন...

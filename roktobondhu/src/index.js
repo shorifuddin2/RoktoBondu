@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App";
 import "./index.css";
+import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import Kobitas from "./components/Blogs/Kobita/Kobitas";
-import Campaigns from "./components/Blogs/Campaign/Campaigns";
-import Anuperona from "./components/Blogs/Anuperona";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Kobitas from './components/Blogs/Kobita/Kobitas';
+import Campaigns from './components/Blogs/Campaign/Campaigns';
+import PoemDetails from "./components/Blogs/Kobita/PoemDetails";
+import CampaignDetails from "./components/Blogs/Campaign/CampaignDetails";
 import Blogs_Details from "./components/Blogs/Blogs_Details";
+import Anuperona from "./components/Blogs/Anuperona";
 import Blogs from "./Pages/Blog";
 import Sohojogi from "./Pages/Sohojogi";
 import Thalassemia from "./Pages/Thalassemia";
@@ -19,6 +21,9 @@ import GalleryBlog from "./Pages/GalleryBlog/GalleryBlog";
 import GalleryBlogDetails from "./Pages/GalleryBlog/GalleryBlogDetails";
 import NewsBlog from "./Pages/NewsBlog/NewsBlog";
 import NewsBlogDetails from "./Pages/NewsBlog/NewsBlogDetails";
+import Blog from "./Pages/Blog";
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -47,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: "/blogs",
     element: <Blogs />
+  },
+  {
+    path: "/blog",
+    element: <Blog />,
   },
   {
     path: "/sohojogi",
@@ -83,6 +92,18 @@ const router = createBrowserRouter([
   {
     path: '/blogs/সংবাদ/:id',
     element: <NewsBlogDetails />
+  },
+  {
+    path: '/blogs/poem/:poemId',
+    element: <PoemDetails />
+  },
+  {
+    path: '/blogs/campaigns',
+    element: <Campaigns />
+  },
+  {
+    path: '/blogs/campaign/:campaignId',
+    element: <CampaignDetails />
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
