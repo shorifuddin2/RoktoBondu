@@ -7,7 +7,7 @@ import AllPlatelet from './AllPlatelet';
 import usePlatelet from '../../hooks/usePlatelet';
 import useDistrict from '../../hooks/useDistrict';
 
-const Platelet = () => {
+const PlateletContent = () => {
     const [districts] = useDistrict();
 
   const [platelets] = usePlatelet()
@@ -113,4 +113,4 @@ const Platelet = () => {
   );
 };
 
-export default Platelet;
+export default PlateletContent;

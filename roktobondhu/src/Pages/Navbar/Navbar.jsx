@@ -32,7 +32,7 @@ const Navbar = () => {
                 <div className="text-sm  navbar-end mx-20 w-full   hidden lg:flex">
                     <ul className=" menu menu-horizontal text-red-500 font-bold">
                     <li className='home m-2'><Link>হোম</Link></li>
-                    <li className='hover m-2'><Link>প্লাটিলেট</Link></li>
+                    <li className='hover m-2'><Link to="/platelet">প্লাটিলেট</Link></li>
                     <li className='hover m-2'><Link>থ্যালাসেমিয়া</Link></li>
                     <li className='hover m-2'><Link>ভলান্টিয়ার্স</Link></li>
                     <li className='hover m-2'><Link>সহযোগী সংগঠন</Link></li>

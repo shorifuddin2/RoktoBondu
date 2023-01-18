@@ -22,6 +22,7 @@ import GalleryBlogDetails from "./Pages/GalleryBlog/GalleryBlogDetails";
 import NewsBlog from "./Pages/NewsBlog/NewsBlog";
 import NewsBlogDetails from "./Pages/NewsBlog/NewsBlogDetails";
 import Blog from "./Pages/Blog";
+import Platelet from "./Pages/Platelet"
 
 
 const router = createBrowserRouter([
@@ -30,9 +31,14 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
+    path: "/platelet",
+    element:<Platelet></Platelet>
+  },
+  {
     path: "/login",
     element: <Login></Login>,
   },
+
   {
     path: "/registration",
     element: <Registration></Registration>,
