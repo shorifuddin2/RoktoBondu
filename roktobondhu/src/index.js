@@ -27,7 +27,8 @@ import NewsBlog from "./Pages/NewsBlog/NewsBlog";
 import NewsBlogDetails from "./Pages/NewsBlog/NewsBlogDetails";
 import Blog from "./Pages/Blog";
 import Platelet from "./Pages/Platelet"
-
+import RoktodanExpreience from "./components/Blogs/RoktodanExperience/RoktodanExperience";
+import RoktodanStory from "./components/Blogs/RoktodanStory/RoktodanStory";
 
 const router = createBrowserRouter([
   {
@@ -80,15 +81,18 @@ const router = createBrowserRouter([
     element: <Roktototthyo />,
   },
   {
-    path: "/blogs/রক্তদানের-অভিজ্ঞতা",
-    element: <Roktodaner/>,
+    path: '/blogs/রক্তদানের-অভিজ্ঞতা',
+    element: <RoktodanExpreience />
+  },
+  {
+    path: '/blogs/রক্তদানের-গল্প',
+    element: <RoktodanStory />
   },
   {
     path: "/blogs/:id",
     element: <Blogs_Details />,
   },
   {
-<<<<<<< HEAD
     path: "/blogs/category/roktototthoy/:id",
     element: <Roktototthyo_Details />,
   },
@@ -96,8 +100,7 @@ const router = createBrowserRouter([
     path: "/blogs/category/roktodaner/:id",
     element: <Roktodaner_Details />,
   },
-  
-=======
+  {
     path: '/blogs/কবিতা',
     element: <Kobitas />
   },
@@ -133,7 +136,6 @@ const router = createBrowserRouter([
     path: '/blogs/campaign/:campaignId',
     element: <CampaignDetails />
   }
->>>>>>> ef2b7dbd8249d15afd4f50f416d50d1534f6316c
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

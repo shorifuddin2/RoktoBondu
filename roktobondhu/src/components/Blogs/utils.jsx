@@ -19,14 +19,13 @@ export const bloggbtn = [
     btnText: "রক্ততথ্য",
     link: "রক্ততথ্য",
   },
- 
   {
     btnText: "রক্তদানের অভিজ্ঞতা",
     link: "রক্তদানের-অভিজ্ঞতা",
   },
   {
     btnText: "রক্তদানের গল্প",
-    link: "anuperona",
+    link: "রক্তদানের-গল্প",
   },
   {
     btnText: "রক্তবন্ধু গ্যালারি",
