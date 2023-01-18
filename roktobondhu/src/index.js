@@ -88,7 +88,6 @@ const router = createBrowserRouter([
     element: <Blogs_Details />,
   },
   {
-<<<<<<< HEAD
     path: "/blogs/category/roktototthoy/:id",
     element: <Roktototthyo_Details />,
   },
@@ -96,8 +95,7 @@ const router = createBrowserRouter([
     path: "/blogs/category/roktodaner/:id",
     element: <Roktodaner_Details />,
   },
-  
-=======
+  {
     path: '/blogs/কবিতা',
     element: <Kobitas />
   },
@@ -133,7 +131,6 @@ const router = createBrowserRouter([
     path: '/blogs/campaign/:campaignId',
     element: <CampaignDetails />
   }
->>>>>>> ef2b7dbd8249d15afd4f50f416d50d1534f6316c
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -6,12 +6,14 @@ import DetailsPlateletModal from './DetailsPlateletModal';
 import AllPlatelet from './AllPlatelet';
 import usePlatelet from '../../hooks/usePlatelet';
 import useDistrict from '../../hooks/useDistrict';
+import { Link } from 'react-router-dom';
 
 const PlateletContent = () => {
     const [districts] = useDistrict();
 
   const [platelets] = usePlatelet()
   const [selectedCus, setSelectedCus] = useState([])
+  const [searchingGroup, setSearchingGroup] = useState({})
   const handleSubmit = (e)=>{
     e.preventDefault()
     const bloodGroup = e.target?.bloodGroup?.value;
@@ -19,7 +21,10 @@ const PlateletContent = () => {
   
     const getPlateletCust = platelets.filter(platelet =>platelet.bloodGroup === bloodGroup && platelet.district === district
     );
-
+   const plateletGroup = platelets.find(platelet => platelet.bloodGroup ===bloodGroup);
+   if(plateletGroup){
+    setSearchingGroup(plateletGroup);
+   }
  if(getPlateletCust){
   setSelectedCus(getPlateletCust);
  }
@@ -30,7 +35,7 @@ const PlateletContent = () => {
 
       {
           selectedCus.length >0?  <section>
-          <h1 className='text-base-100 text-center mb-24'><span className='bg-rose-600 lg:px-10 md:px-5 sm:px-3 py-2 rounded-full lg:text-xl md:text-xl sm:text-sm font-bold'>A+ প্লাটিলেট রক্তবন্ধুর তালিকা</span></h1>
+          <h1 className='text-base-100 text-center mb-24'><span className='bg-rose-600 lg:px-10 md:px-5 sm:px-3 py-2 rounded-full lg:text-xl md:text-xl sm:text-sm font-bold'>{searchingGroup.bloodGroup} প্লাটিলেট রক্তবন্ধুর তালিকা</span></h1>
          <AllPlatelet selectedCus={selectedCus}></AllPlatelet>
         </section>: <>
         <section>
@@ -75,13 +80,13 @@ const PlateletContent = () => {
                         <div className='lg:flex md:flex sm:flex-none items-center gap-x-5'>
                             <h5 className='text-black'>প্লাটিলেট ডোনার হতে চাইলে</h5>
                             <div>
-                                <button className='bg-secondary text-base-100 px-8 rounded-full py-2 sm:mt-3'>রেজিস্ট্রেশন করুন</button>
+                                <button className='bg-secondary text-base-100 px-8 rounded-full py-2 sm:mt-3'><a href='#registration' className='no-underline'>রেজিস্ট্রেশন করুন</a></button>
                             </div>
                         </div>
                         <div className='flex flex-col items-center mt-10'>
                             <h5 className='text-black text-center'>পুরাতুন রক্তবন্ধু প্লাটিলেট দিতে চাইলে লগইন করে</h5>
                             <div className='mt-2'> 
-                                <button className=' text-base-100 px-8 rounded-full py-2' style={{backgroundColor:'#dc3545'}}>প্রোফাইল আপডেট করুন</button>
+                                <button className=' text-base-100 px-8 rounded-full py-2' style={{backgroundColor:'#dc3545'}}><Link to="/login" className='no-underline'>প্রোফাইল আপডেট করুন</Link></button>
                             </div>
                         </div>
                    </div>
