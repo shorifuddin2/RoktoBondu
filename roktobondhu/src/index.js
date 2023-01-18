@@ -4,7 +4,10 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
+import Kobitas from './components/Blogs/Kobita/Kobitas';
+import Campaigns from './components/Blogs/Campaign/Campaigns';
+import PoemDetails from "./components/Blogs/Kobita/PoemDetails";
+import CampaignDetails from "./components/Blogs/Campaign/CampaignDetails";
 import Blogs_Details from "./components/Blogs/Blogs_Details";
 import Anuperona from "./components/Blogs/Anuperona";
 import Blogs from "./Pages/Blog";
@@ -35,6 +38,23 @@ const router = createBrowserRouter([
     path: "/blogs/:id",
     element: <Blogs_Details />,
   },
+  {
+    path: '/blogs/কবিতা',
+    element: <Kobitas/>
+  },
+  {
+    path: '/blogs/poem/:poemId',
+    element: <PoemDetails/>
+    
+  },
+  {
+    path: '/blogs/campaigns',
+    element: <Campaigns/>
+  },
+  {
+    path: '/blogs/campaign/:campaignId',
+    element: <CampaignDetails/>
+  }
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
