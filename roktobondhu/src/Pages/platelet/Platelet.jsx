@@ -2,21 +2,24 @@ import React, { useState } from 'react';
 import './Platelet.css'
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
 import PlateletReg from './PlateletReg';
-import AllDistrict from './AllDistrict';
 import DetailsPlateletModal from './DetailsPlateletModal';
 import AllPlatelet from './AllPlatelet';
 import usePlatelet from '../../hooks/usePlatelet';
+import useDistrict from '../../hooks/useDistrict';
 
 const Platelet = () => {
- const [bloodGroup, setBloodGroup]= useState(''); 
- const [district, setDistrict]= useState('');
- 
+    const [districts] = useDistrict();
+
   const [platelets] = usePlatelet()
   const [selectedCus, setSelectedCus] = useState([])
-  const handleSubmit = ()=>{
+  const handleSubmit = (e)=>{
+    e.preventDefault()
+    const bloodGroup = e.target?.bloodGroup?.value;
+    const district = e.target?.district?.value;
+  
+    const getPlateletCust = platelets.filter(platelet =>platelet.bloodGroup === bloodGroup && platelet.district === district
+    );
 
- const getPlateletCust = platelets.filter(platelet =>platelet.bloodGroup === bloodGroup && platelet.district === district
- );
  if(getPlateletCust){
   setSelectedCus(getPlateletCust);
  }
@@ -24,13 +27,20 @@ const Platelet = () => {
   }
   return (
     <div className='lg:mx-28 sm:mx-10 mt-16'>
-       <section>
+
+      {
+          selectedCus.length >0?  <section>
+          <h1 className='text-base-100 text-center mb-24'><span className='bg-rose-600 lg:px-10 md:px-5 sm:px-3 py-2 rounded-full lg:text-xl md:text-xl sm:text-sm font-bold'>A+ প্লাটিলেট রক্তবন্ধুর তালিকা</span></h1>
+         <AllPlatelet selectedCus={selectedCus}></AllPlatelet>
+        </section>: <>
+        <section>
           <div className='grid lg:grid-cols-2 sm:grid-cols-1'>
-              <div>
+                <form onSubmit={handleSubmit}>
+                <div>
                   <h1 className='text-primary text-2xl font-bold '>প্লাটিলেট - রক্তবন্ধু খুঁজুন ....</h1>
                   <hr className='mt-5 lg:w-96 lg:h-10 md:w-96 sm:w-60'/>
                 <label className='custom-select icon-upper icon-down   mt-4'>
-                <select onChange={(e)=>setBloodGroup(e.target.value)} className='platelet-group pl-2 border rounded text-black lg:w-96 lg:h-10 md:w-96 sm:w-60 sm:h-10'>
+                <select name='bloodGroup' className='platelet-group pl-2 border rounded text-black lg:w-96 lg:h-10 md:w-96 sm:w-60 sm:h-10'>
                       <option>A+</option>
                       <option>A-</option>
                       <option>B+</option>
@@ -41,14 +51,25 @@ const Platelet = () => {
                       <option>AB-</option>
                   </select>
                 </label>
-                <AllDistrict setDistrict={setDistrict}></AllDistrict>
-                 <div>
-                 <button onClick={handleSubmit} className='bg-primary text-base-100 px-6 rounded-full btn mt-5'>
-                  <MagnifyingGlassIcon className='w-5 h-5 mr-3 ml-2 text-xl'/>
-                 
-                  খুঁজুন</button>
+                <label className='custom-select icon-upper icon-down mt-4'>
+                    <select name="district" className='platelet-group pl-2 border rounded text-black lg:w-96 lg:h-10 md:w-96 sm:w-60 sm:h-10' >
+                        {
+                            districts.map(district =><option  key={district.id}>{district.bn_name}</option>)
+                        }
+                    
+                    </select>
+                </label>
+                 <div className='flex items-center relative'>
+                     <div className='absolute left-5 mt-5'>
+                         <MagnifyingGlassIcon className='w-5 h-5 text-xl text-base-100 font-bold'/>
+                     </div>
+                   <div>
+                   <input type="submit" value='খুঁজুন' className='bg-primary px-10 text-base-100 font-bold rounded-full btn mt-5'/>
+                      
+                   </div>
                  </div>
               </div>
+                </form>
               <div className='flex items-center justify-center sm:mt-5'>
                    <div>
                         <div className='lg:flex md:flex sm:flex-none items-center gap-x-5'>
@@ -81,16 +102,13 @@ const Platelet = () => {
                  </div>
             </div>
        </section>
-       <section className='flex lg:justify-center mt-16'>
+       <section className='flex justify-center mt-16'>
            <PlateletReg></PlateletReg>
            
        </section>
-     
-          <section>
-                <h1 className='text-base-100 text-center mb-24'><span className='bg-rose-600 lg:px-10 md:px-5 sm:px-3 py-2 rounded-full lg:text-xl md:text-xl sm:text-sm font-bold'>A+ প্লাটিলেট রক্তবন্ধুর তালিকা</span></h1>
-               <AllPlatelet selectedCus={selectedCus}></AllPlatelet>
-          </section>
-      
+        </>
+            }
+       
     </div>
   );
 };
