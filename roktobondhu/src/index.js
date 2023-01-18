@@ -10,6 +10,10 @@ import PoemDetails from "./components/Blogs/Kobita/PoemDetails";
 import CampaignDetails from "./components/Blogs/Campaign/CampaignDetails";
 import Blogs_Details from "./components/Blogs/Blogs_Details";
 import Anuperona from "./components/Blogs/Anuperona";
+import Roktototthyo from "./components/Blogs/Category/Roktototthyo/Roktototthyo";
+import Roktototthyo_Details from "./components/Blogs/Category/Roktototthyo/Roktototthyo_Details";
+import Roktodaner from "./components/Blogs/Category/Roktodaner/Roktodaner";
+import Roktodaner_Details from "./components/Blogs/Category/Roktodaner/Roktodaner_Details";
 import Blogs from "./Pages/Blog";
 import Sohojogi from "./Pages/Sohojogi";
 import Thalassemia from "./Pages/Thalassemia";
@@ -72,10 +76,28 @@ const router = createBrowserRouter([
     element: <Anuperona />,
   },
   {
+    path: "/blogs/রক্ততথ্য",
+    element: <Roktototthyo />,
+  },
+  {
+    path: "/blogs/রক্তদানের-অভিজ্ঞতা",
+    element: <Roktodaner/>,
+  },
+  {
     path: "/blogs/:id",
     element: <Blogs_Details />,
   },
   {
+<<<<<<< HEAD
+    path: "/blogs/category/roktototthoy/:id",
+    element: <Roktototthyo_Details />,
+  },
+  {
+    path: "/blogs/category/roktodaner/:id",
+    element: <Roktodaner_Details />,
+  },
+  
+=======
     path: '/blogs/কবিতা',
     element: <Kobitas />
   },
@@ -111,6 +133,7 @@ const router = createBrowserRouter([
     path: '/blogs/campaign/:campaignId',
     element: <CampaignDetails />
   }
+>>>>>>> ef2b7dbd8249d15afd4f50f416d50d1534f6316c
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
