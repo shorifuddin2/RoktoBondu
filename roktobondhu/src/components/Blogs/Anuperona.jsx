@@ -9,7 +9,7 @@ const Anuperona = () => {
     <Container>
       <Blog_Title title="পোষ্ট সমূহ" />
       <div className=" flex gap-8 mt-12 flex-wrap justify-between">
-        
+        {" "}
         {data.map((e) => (
           <Blog_Card data={e} />
         ))}

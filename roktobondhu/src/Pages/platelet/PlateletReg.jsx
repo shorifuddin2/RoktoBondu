@@ -9,7 +9,7 @@ const PlateletReg = () => {
     const [districts] = useDistrict()
     const [days] = useDays()
     return (
-        <div id='registration' className='shadow-lg mb-44'>
+        <div className='shadow-lg mb-44'>
       
              <div>
              <h1 className='text-center lg:w-full md:w-full sm:w-full'><p className='bg-primary text-base-100 py-5 lg:px-32 md:px-32 sm:px-5  lg:text-2xl md:text-2xl sm:text-xl '>

@@ -10,10 +10,6 @@ import PoemDetails from "./components/Blogs/Kobita/PoemDetails";
 import CampaignDetails from "./components/Blogs/Campaign/CampaignDetails";
 import Blogs_Details from "./components/Blogs/Blogs_Details";
 import Anuperona from "./components/Blogs/Anuperona";
-import Roktototthyo from "./components/Blogs/Category/Roktototthyo/Roktototthyo";
-import Roktototthyo_Details from "./components/Blogs/Category/Roktototthyo/Roktototthyo_Details";
-import Roktodaner from "./components/Blogs/Category/Roktodaner/Roktodaner";
-import Roktodaner_Details from "./components/Blogs/Category/Roktodaner/Roktodaner_Details";
 import Blogs from "./Pages/Blog";
 import Sohojogi from "./Pages/Sohojogi";
 import Thalassemia from "./Pages/Thalassemia";
@@ -26,9 +22,8 @@ import GalleryBlogDetails from "./Pages/GalleryBlog/GalleryBlogDetails";
 import NewsBlog from "./Pages/NewsBlog/NewsBlog";
 import NewsBlogDetails from "./Pages/NewsBlog/NewsBlogDetails";
 import Blog from "./Pages/Blog";
-import Platelet from "./Pages/Platelet"
-import RoktodanExpreience from "./components/Blogs/RoktodanExperience/RoktodanExperience";
-import RoktodanStory from "./components/Blogs/RoktodanStory/RoktodanStory";
+import Platelet from "./Pages/platelet/Platelet";
+
 
 const router = createBrowserRouter([
   {
@@ -36,14 +31,9 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/platelet",
-    element:<Platelet></Platelet>
-  },
-  {
     path: "/login",
     element: <Login></Login>,
   },
-
   {
     path: "/registration",
     element: <Registration></Registration>,
@@ -51,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: "/thalassemia",
     element: <Thalassemia />,
+  },
+  {
+    path: "/platelet",
+    element: <Platelet />,
   },
   {
     path: "/volunteers",
@@ -77,28 +71,8 @@ const router = createBrowserRouter([
     element: <Anuperona />,
   },
   {
-    path: "/blogs/রক্ততথ্য",
-    element: <Roktototthyo />,
-  },
-  {
-    path: '/blogs/রক্তদানের-অভিজ্ঞতা',
-    element: <RoktodanExpreience />
-  },
-  {
-    path: '/blogs/রক্তদানের-গল্প',
-    element: <RoktodanStory />
-  },
-  {
     path: "/blogs/:id",
     element: <Blogs_Details />,
-  },
-  {
-    path: "/blogs/category/roktototthoy/:id",
-    element: <Roktototthyo_Details />,
-  },
-  {
-    path: "/blogs/category/roktodaner/:id",
-    element: <Roktodaner_Details />,
   },
   {
     path: '/blogs/কবিতা',

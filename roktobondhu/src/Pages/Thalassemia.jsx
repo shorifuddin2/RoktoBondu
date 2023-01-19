@@ -1,7 +1,7 @@
 import React from "react";
 
 const Thalassemia = () => {
-  return <div></div>;
+  return <div>Thalassemia</div>;
 };
 
 export default Thalassemia;
