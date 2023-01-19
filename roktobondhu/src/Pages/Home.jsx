@@ -1,14 +1,16 @@
 import React from "react";
+import FirstPage from "../components/First_Page/First_Page";
 import Footer from "./Footer/Footer";
 import Navbar from "./Navbar/Navbar";
-import Platelet from "./platelet/Platelet";
 
 const Home = () => {
-  return <div>
+  return (
+    <div>
       <Navbar></Navbar>
-      <Platelet></Platelet>
+      <FirstPage></FirstPage>
       <Footer></Footer>
-  </div>;
+    </div>
+  );
 };
 
 export default Home;

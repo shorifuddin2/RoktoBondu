@@ -4,8 +4,8 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Kobitas from './components/Blogs/Kobita/Kobitas';
-import Campaigns from './components/Blogs/Campaign/Campaigns';
+import Kobitas from "./components/Blogs/Kobita/Kobitas";
+import Campaigns from "./components/Blogs/Campaign/Campaigns";
 import PoemDetails from "./components/Blogs/Kobita/PoemDetails";
 import CampaignDetails from "./components/Blogs/Campaign/CampaignDetails";
 import Blogs_Details from "./components/Blogs/Blogs_Details";
@@ -23,12 +23,12 @@ import NewsBlog from "./Pages/NewsBlog/NewsBlog";
 import NewsBlogDetails from "./Pages/NewsBlog/NewsBlogDetails";
 import Blog from "./Pages/Blog";
 import Platelet from "./Pages/platelet/Platelet";
-
+import Home from "./Pages/Home";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Home />,
   },
   {
     path: "/login",
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/blogs",
-    element: <Blogs />
+    element: <Blogs />,
   },
   {
     path: "/blog",
@@ -75,41 +75,41 @@ const router = createBrowserRouter([
     element: <Blogs_Details />,
   },
   {
-    path: '/blogs/কবিতা',
-    element: <Kobitas />
+    path: "/blogs/কবিতা",
+    element: <Kobitas />,
   },
   {
-    path: '/blogs/campaign',
-    element: <Campaigns />
+    path: "/blogs/campaign",
+    element: <Campaigns />,
   },
   {
-    path: '/blogs/রক্তবন্ধু-গ্যালারি',
-    element: <GalleryBlog />
+    path: "/blogs/রক্তবন্ধু-গ্যালারি",
+    element: <GalleryBlog />,
   },
   {
-    path: '/blogs/রক্তবন্ধু-গ্যালারি/:id',
-    element: <GalleryBlogDetails />
+    path: "/blogs/রক্তবন্ধু-গ্যালারি/:id",
+    element: <GalleryBlogDetails />,
   },
   {
-    path: '/blogs/সংবাদ',
-    element: <NewsBlog />
+    path: "/blogs/সংবাদ",
+    element: <NewsBlog />,
   },
   {
-    path: '/blogs/সংবাদ/:id',
-    element: <NewsBlogDetails />
+    path: "/blogs/সংবাদ/:id",
+    element: <NewsBlogDetails />,
   },
   {
-    path: '/blogs/poem/:poemId',
-    element: <PoemDetails />
+    path: "/blogs/poem/:poemId",
+    element: <PoemDetails />,
   },
   {
-    path: '/blogs/campaigns',
-    element: <Campaigns />
+    path: "/blogs/campaigns",
+    element: <Campaigns />,
   },
   {
-    path: '/blogs/campaign/:campaignId',
-    element: <CampaignDetails />
-  }
+    path: "/blogs/campaign/:campaignId",
+    element: <CampaignDetails />,
+  },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
