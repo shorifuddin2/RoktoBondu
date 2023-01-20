@@ -16,14 +16,14 @@ const Navbar = () => {
                     </label>
                         <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 text-red-500">
                             
-                        <li className=' home'><Link className='text-center mx-auto'>হোম</Link></li>
-                        <li className='hover'><Link className='text-center mx-auto'>প্লাটিলেট</Link></li>
-                        <li className='hover'><Link className='text-center mx-auto'>থ্যালাসেমিয়া</Link></li>
-                        <li className='hover'><Link className='text-center mx-auto'>ভলান্টিয়ার্স</Link></li>
-                        <li className='hover'><Link className='text-center mx-auto'>সহযোগী সংগঠন</Link></li>
-                        <li className='hover'><Link className='text-center mx-auto'>ব্লগ</Link></li>
-                        <li className='hover'><Link className='text-center mx-auto'>লগইন</Link></li>
-                        <li className='hover'><Link className='text-center mx-auto'>রেজিস্ট্রেশন</Link></li>
+                        <li className=' home'><Link className='text-center mx-auto' to="/">হোম</Link></li>
+                        <li className='hover'><Link className='text-center mx-auto' to="/platelet">প্লাটিলেট</Link></li>
+                        <li className='hover'><Link className='text-center mx-auto' to="/thalassemia">থ্যালাসেমিয়া</Link></li>
+                        <li className='hover'><Link className='text-center mx-auto' to="/volunteers">ভলান্টিয়ার্স</Link></li>
+                        <li className='hover'><Link className='text-center mx-auto' to="/sohojogi">সহযোগী সংগঠন</Link></li>
+                        <li className='hover'><Link className='text-center mx-auto' to="/blog">ব্লগ</Link></li>
+                        <li className='hover'><Link className='text-center mx-auto' to="/login">লগইন</Link></li>
+                        <li className='hover'><Link className='text-center mx-auto' to="/registration">রেজিস্ট্রেশন</Link></li>
                     </ul>
                     </div>
 
@@ -31,14 +31,14 @@ const Navbar = () => {
                 </div>
                 <div className="text-sm  navbar-end mx-20 w-full   hidden lg:flex">
                     <ul className=" menu menu-horizontal text-red-500 font-bold">
-                    <li className='home m-2'><Link>হোম</Link></li>
-                    <li className='hover m-2'><Link>প্লাটিলেট</Link></li>
-                    <li className='hover m-2'><Link>থ্যালাসেমিয়া</Link></li>
-                    <li className='hover m-2'><Link>ভলান্টিয়ার্স</Link></li>
-                    <li className='hover m-2'><Link>সহযোগী সংগঠন</Link></li>
+                    <li className='home m-2'><Link to="/">হোম</Link></li>
+                    <li className='hover m-2'><Link to="/platelet">প্লাটিলেট</Link></li>
+                    <li className='hover m-2'><Link to="/thalassemia">থ্যালাসেমিয়া</Link></li>
+                    <li className='hover m-2'><Link to="/volunteers">ভলান্টিয়ার্স</Link></li>
+                    <li className='hover m-2'><Link to="/sohojogi">সহযোগী সংগঠন</Link></li>
                     <li className='hover m-2'><Link to="/blog">ব্লগ</Link></li>
-                    <li className='hover m-2'><Link>লগইন</Link></li>
-                    <li className='hover m-2'><Link>রেজিস্ট্রেশন</Link></li>
+                    <li className='hover m-2'><Link to="/login">লগইন</Link></li>
+                    <li className='hover m-2'><Link to="/registration">রেজিস্ট্রেশন</Link></li>
 
 
                     </ul>
