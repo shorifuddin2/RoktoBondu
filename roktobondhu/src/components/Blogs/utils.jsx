@@ -13,7 +13,7 @@ export const bloggbtn = [
   },
   {
     btnText: "প্রথম রক্তদান",
-    link: "anuperona",
+    link: "প্রথম-রক্তদান",
   },
   {
     btnText: "রক্ততথ্য",

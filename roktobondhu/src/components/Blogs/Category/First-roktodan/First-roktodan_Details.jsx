@@ -2,11 +2,12 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Container from "../../../Common/Container";
-import data from "./Roktodaner.card.json";
+import data from "./First-roktodan.card.json";
 import { AiFillFacebook } from "react-icons/ai";
 import { FaTwitterSquare, FaLinkedin, FaWhatsappSquare } from "react-icons/fa";
 import Blog_Card from "../../Blog_Card";
 import Blog_Title from "../../../Common/Blog_Title";
+import NavbarBlog from "../../../../Pages/Navbar/NavbarBlog/NavbarBlog";
 
 
 const Roktototthyo_Details = () => {
@@ -36,7 +37,10 @@ const Roktototthyo_Details = () => {
     detailspara7,
   } = Roktototthyo_Data;
   return (
+    <div>
+      <NavbarBlog></NavbarBlog>
     <Container>
+      
       <div className="mt-14">
         <h1 className=" text-[25px] leading-8 border-[#212529] border-b pb-5 text-[#212529]">
           {title}
@@ -144,6 +148,7 @@ const Roktototthyo_Details = () => {
         </div>
       </div>
     </Container>
+    </div>
   );
 };
 

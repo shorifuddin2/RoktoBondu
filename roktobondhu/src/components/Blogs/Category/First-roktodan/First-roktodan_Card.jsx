@@ -18,7 +18,7 @@ const Roktodaner_Card = ({ data }) => {
         <p className=" text-[#212529] leading-6 text-[14px] mt-3">{details}</p>
       </div>
       <div
-        onClick={() => navigate(`/blogs/category/roktodaner/${id}`)}
+        onClick={() => navigate(`/blogs/category/First-roktodan/${id}`)}
         className="card-tbn cursor-pointer hover:bg-black rounded-full absolute bottom-6 mx-8 py-2 text-white px-6 bg-red-600 inline-block"
       >
         বিস্তারিত দেখুন...
