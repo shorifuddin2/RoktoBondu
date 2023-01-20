@@ -10,13 +10,10 @@ import PoemDetails from "./components/Blogs/Kobita/PoemDetails";
 import CampaignDetails from "./components/Blogs/Campaign/CampaignDetails";
 import Blogs_Details from "./components/Blogs/Blogs_Details";
 import Anuperona from "./components/Blogs/Anuperona";
-<<<<<<< HEAD
 import Roktototthyo from "./components/Blogs/Category/Roktototthyo/Roktototthyo";
 import Roktototthyo_Details from "./components/Blogs/Category/Roktototthyo/Roktototthyo_Details";
 import First_roktodan from "./components/Blogs/Category/First-roktodan/First-roktodan";
 import First_roktodan_Details from "./components/Blogs/Category/First-roktodan/First-roktodan_Details";
-=======
->>>>>>> 21be59c42da45e9f96586b95918345ea8a710616
 import Blogs from "./Pages/Blog";
 import Sohojogi from "./Pages/Sohojogi";
 import Thalassemia from "./Pages/Thalassemia";
@@ -78,7 +75,6 @@ const router = createBrowserRouter([
     element: <Anuperona />,
   },
   {
-<<<<<<< HEAD
     path: "/blogs/রক্ততথ্য",
     element: <Roktototthyo />,
   },
@@ -87,13 +83,10 @@ const router = createBrowserRouter([
     element: <First_roktodan/>,
   },
   {
-=======
->>>>>>> 21be59c42da45e9f96586b95918345ea8a710616
     path: "/blogs/:id",
     element: <Blogs_Details />,
   },
   {
-<<<<<<< HEAD
     path: "/blogs/category/roktototthoy/:id",
     element: <Roktototthyo_Details />,
   },
@@ -102,43 +95,6 @@ const router = createBrowserRouter([
     element: <First_roktodan_Details />,
   },
   
-=======
-    path: "/blogs/কবিতা",
-    element: <Kobitas />,
-  },
-  {
-    path: "/blogs/campaign",
-    element: <Campaigns />,
-  },
-  {
-    path: "/blogs/রক্তবন্ধু-গ্যালারি",
-    element: <GalleryBlog />,
-  },
-  {
-    path: "/blogs/রক্তবন্ধু-গ্যালারি/:id",
-    element: <GalleryBlogDetails />,
-  },
-  {
-    path: "/blogs/সংবাদ",
-    element: <NewsBlog />,
-  },
-  {
-    path: "/blogs/সংবাদ/:id",
-    element: <NewsBlogDetails />,
-  },
-  {
-    path: "/blogs/poem/:poemId",
-    element: <PoemDetails />,
-  },
-  {
-    path: "/blogs/campaigns",
-    element: <Campaigns />,
-  },
-  {
-    path: "/blogs/campaign/:campaignId",
-    element: <CampaignDetails />,
-  },
->>>>>>> 21be59c42da45e9f96586b95918345ea8a710616
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

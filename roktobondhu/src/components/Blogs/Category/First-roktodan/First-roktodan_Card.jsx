@@ -6,7 +6,7 @@ const Roktodaner_Card = ({ data }) => {
   const navigate = useNavigate();
   const { title, author, date, details, id, img } = data;
   return (
-    <div className=" w-[350px] relative h-[537px]  bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className=" w-[350px] relative h-[537px]  bg-white shadow-lg rounded-lg overflow-hidden mt-12">
       <div className="blog_card_img w-full h-[200px] ">
         <img src={img} className="w-full h-full" alt="" />
       </div>

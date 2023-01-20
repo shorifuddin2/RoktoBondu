@@ -17,7 +17,7 @@ export const bloggbtn = [
   },
   {
     btnText: "রক্ততথ্য",
-    link: "anuperona",
+    link: "রক্ততথ্য",
   },
   {
     btnText: "কবিতা",

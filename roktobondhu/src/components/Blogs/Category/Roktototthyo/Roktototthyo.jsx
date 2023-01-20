@@ -12,7 +12,7 @@ const Roktototthyo = () => {
       <NavbarBlog></NavbarBlog>
       <Container>
       <Blog_Title title="পোষ্ট সমূহ" />
-      <div className=" flex gap-8 mt-12 flex-wrap justify-between">
+      <div className=" grid lg:grid-cols-3 md:grid-cols-2 gap-8 mt-12 md:container mx-auto">
         
         {data.map((e) => (
           <Roktotothyo_Card data={e} />

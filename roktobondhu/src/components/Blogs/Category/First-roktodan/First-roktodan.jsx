@@ -11,7 +11,7 @@ const Roktodaner = () => {
       <NavbarBlog></NavbarBlog>
       <Container>
       <Blog_Title title="পোষ্ট সমূহ" />
-      <div className=" grid xl:grid-cols-3 lg:grid-cols-3 sm:grid-cols-2 xsm:grid-cols-2 gap-2 mt-12 flex-wrap justify-center">
+      <div className=" grid lg:grid-cols-3 md:grid-cols-2 gap-8 mt-12 md:container mx-auto ">
         
         {data.map((e) => (
           <Blog_Card data={e} />

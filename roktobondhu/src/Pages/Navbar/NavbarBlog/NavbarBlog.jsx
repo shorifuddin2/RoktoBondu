@@ -17,7 +17,7 @@ const NavbarBlog = () => {
                         
                         <li className='hover m-2'><Link to="">রক্তবন্ধু খুঁজুন</Link></li>
                         <li className='hover m-2'><Link to="">ক্যাম্পেইন নিউজ</Link></li>
-                        <li className='hover m-2'><Link to="">প্রথম রক্তদান </Link></li>
+                        <li className='hover m-2'><Link to="/blogs/প্রথম-রক্তদান">প্রথম রক্তদান </Link></li>
                         <li className='hover m-2'><Link to="">রক্তদানের অভিজ্ঞতা </Link></li>
                         <li className='hover m-2'><Link to="">রক্তদানের গল্প</Link></li>
                         <li className='hover m-2'><Link to="">রক্তবন্ধু গ্যালারি</Link></li>
@@ -31,7 +31,7 @@ const NavbarBlog = () => {
                     <li className='blog m-2'><Link to="/blog">ব্লগ</Link></li>
                     <li className='hover m-2'><Link to="">রক্তবন্ধু খুঁজুন</Link></li>
                     <li className='hover m-2'><Link to="">ক্যাম্পেইন নিউজ</Link></li>
-                    <li className='hover m-2'><Link to="">প্রথম রক্তদান</Link></li>
+                    <li className='hover m-2'><Link to="/blogs/প্রথম-রক্তদান">প্রথম রক্তদান</Link></li>
                     <li className='hover m-2'><Link to="">রক্তদানের অভিজ্ঞতা </Link></li>
                     <li className='hover m-2'><Link to="">রক্তদানের গল্প</Link></li>
                     <li className='hover m-2'><Link to="">রক্তবন্ধু গ্যালারি</Link></li>
