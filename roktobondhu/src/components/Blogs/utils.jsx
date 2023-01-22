@@ -9,7 +9,7 @@ export const bloggbtn = [
   },
   {
     btnText: "ক্যাম্পেইন নিউজ",
-    link: "campaigns",
+    link: "ক্যাম্পেইন নিউজ",
   },
   {
     btnText: "প্রথম রক্তদান",
@@ -20,12 +20,12 @@ export const bloggbtn = [
     link: "রক্ততথ্য",
   },
   {
-    btnText: "কবিতা",
-    link: "anuperona",
+    btnText: "রক্তদানের-অভিজ্ঞতা",
+    link: "রক্তদানের-অভিজ্ঞতা",
   },
   {
-    btnText: "রক্তদানের অভিজ্ঞতা",
-    link: "anuperona",
+    btnText: "রক্তদানের-গল্প",
+    link: "রক্তদানের-গল্প",
   },
   {
     btnText: "রক্তবন্ধু গ্যালারি",

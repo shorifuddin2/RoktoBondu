@@ -10,15 +10,15 @@ const Roktodaner = () => {
     <div>
       <NavbarBlog></NavbarBlog>
       <Container>
-      <Blog_Title title="পোষ্ট সমূহ" />
-      <div className=" grid lg:grid-cols-3 md:grid-cols-2 gap-8 mt-12 md:container mx-auto ">
-        
-        {data.map((e) => (
-          <Blog_Card data={e} />
-        ))}
-      </div>
-      <Pagination />
-    </Container>
+        <Blog_Title title="পোষ্ট সমূহ" />
+        <div className=" grid lg:grid-cols-3 md:grid-cols-2 gap-8 mt-12 md:container mx-auto ">
+
+          {data.map((e) => (
+            <Blog_Card data={e} />
+          ))}
+        </div>
+        <Pagination />
+      </Container>
     </div>
   );
 };

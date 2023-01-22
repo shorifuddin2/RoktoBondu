@@ -1,12 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Kobitas from "./components/Blogs/Kobita/Kobitas";
-import Campaigns from "./components/Blogs/Campaign/Campaigns";
 import PoemDetails from "./components/Blogs/Kobita/PoemDetails";
+import Campaigns from "./components/Blogs/Campaign/Campaigns";
 import CampaignDetails from "./components/Blogs/Campaign/CampaignDetails";
 import Blogs_Details from "./components/Blogs/Blogs_Details";
 import Anuperona from "./components/Blogs/Anuperona";
@@ -27,12 +26,34 @@ import NewsBlog from "./Pages/NewsBlog/NewsBlog";
 import NewsBlogDetails from "./Pages/NewsBlog/NewsBlogDetails";
 import Blog from "./Pages/Blog";
 import Platelet from "./Pages/platelet/Platelet";
-import Home from "./Pages/Home";
+import First_Page from "./components/First_Page/First_Page";
+import RoktodanExpreience from "./components/Blogs/RoktodanExperience/RoktodanExperience";
+import RoktodanStory from "./components/Blogs/RoktodanStory/RoktodanStory";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <First_Page />,
+  },
+  {
+    path: "/platelet",
+    element: <Platelet />,
+  },
+  {
+    path: "/thalassemia",
+    element: <Thalassemia />,
+  },
+  {
+    path: "/thalassemia-details",
+    element: <ThalassemiaDetails />,
+  },
+  {
+    path: "/volunteers",
+    element: <Volunteers />,
+  },
+  {
+    path: "/sohojogi",
+    element: <Sohojogi />,
   },
   {
     path: "/login",
@@ -43,58 +64,57 @@ const router = createBrowserRouter([
     element: <Registration></Registration>,
   },
   {
-    path: "/thalassemia",
-    element: <Thalassemia />,
-  },
-  {
-    path: "/platelet",
-    element: <Platelet />,
-  },
-  {
-    path: "/volunteers",
-    element: <Volunteers />,
-  },
-  {
-    path: "/thalassemia-details",
-    element: <ThalassemiaDetails />,
-  },
-  {
-    path: "/blogs",
-    element: <Blogs />,
-  },
-  {
     path: "/blog",
     element: <Blog />,
-  },
-  {
-    path: "/sohojogi",
-    element: <Sohojogi />,
   },
   {
     path: "/blogs/অনুপ্রেরণা",
     element: <Anuperona />,
   },
   {
-    path: "/blogs/রক্ততথ্য",
-    element: <Roktototthyo />,
+    path: "/blogs/:id",
+    element: <Blogs_Details />,
+  },
+  {
+    path: "/blogs/কবিতা",
+    element: <Kobitas />,
+  },
+  {
+    path: "/blogs/ক্যাম্পেইন নিউজ",
+    element: <Campaigns />,
   },
   {
     path: "/blogs/প্রথম-রক্তদান",
-    element: <First_roktodan/>,
+    element: <First_roktodan />,
   },
   {
-    path: "/blogs/:id",
-    element: <Blogs_Details />,
+    path: "/blogs/category/First-roktodan/:id",
+    element: <First_roktodan_Details />,
+  },
+  {
+    path: "/blogs/রক্ততথ্য",
+    element: <Roktototthyo />,
   },
   {
     path: "/blogs/category/roktototthoy/:id",
     element: <Roktototthyo_Details />,
   },
   {
-    path: "/blogs/category/First-roktodan/:id",
-    element: <First_roktodan_Details />,
+    path: "/blogs/রক্তদানের-অভিজ্ঞতা",
+    element: <RoktodanExpreience />,
   },
-  
+  {
+    path: "/blogs/রক্তদানের-গল্প",
+    element: <RoktodanStory />,
+  },
+  {
+    path: "/blogs/রক্তবন্ধু গ্যালারি",
+    element: <GalleryBlog />
+  },
+  {
+    path: "/blogs/সংবাদ",
+    element: <NewsBlog />
+  }
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

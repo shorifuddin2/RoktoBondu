@@ -4,9 +4,9 @@ import NavbarBlog from "../Pages/Navbar/NavbarBlog/NavbarBlog";
 
 const Blog = () => {
   return <div>
-              <NavbarBlog/>
-              <Blogs/>
-        </div>;
+    <NavbarBlog />
+    <Blogs />
+  </div>;
 };
 
 export default Blog;
