@@ -29,6 +29,10 @@ import Platelet from "./Pages/platelet/Platelet";
 import First_Page from "./components/First_Page/First_Page";
 import RoktodanExpreience from "./components/Blogs/RoktodanExperience/RoktodanExperience";
 import RoktodanStory from "./components/Blogs/RoktodanStory/RoktodanStory";
+import ProfileSideNavbar from "./Pages/Profile/ProfileSideNavbar";
+import Profile from "./Pages/Profile/Profile";
+import LastDonate from "./Pages/Profile/LastDonate";
+import PasswordChange from "./Pages/Profile/PasswordChange";
 
 const router = createBrowserRouter([
   {
@@ -108,7 +112,7 @@ const router = createBrowserRouter([
     element: <RoktodanStory />,
   },
   {
-    path: "/blogs/রক্তবন্ধু গ্যালারি",
+    path: "/blogs/রক্তবন্ধু-গ্যালারি",
     element: <GalleryBlog />
   },
   {
@@ -117,20 +121,20 @@ const router = createBrowserRouter([
   },
   {
     path: "/profile-sideNavbar",
-    element: <ProfileSideNavbar/>,
+    element: <ProfileSideNavbar />,
   },
   {
     path: "/profile",
-    element: <Profile/>,
+    element: <Profile />,
   },
   {
     path: "/lastDonate",
-    element: <LastDonate/>,
+    element: <LastDonate />,
   },
   {
     path: "/change-password",
-    element: <PasswordChange/>,
-  },
+    element: <PasswordChange />,
+  }
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
