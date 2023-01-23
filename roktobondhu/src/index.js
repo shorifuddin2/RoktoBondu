@@ -114,7 +114,23 @@ const router = createBrowserRouter([
   {
     path: "/blogs/সংবাদ",
     element: <NewsBlog />
-  }
+  },
+  {
+    path: "/profile-sideNavbar",
+    element: <ProfileSideNavbar/>,
+  },
+  {
+    path: "/profile",
+    element: <Profile/>,
+  },
+  {
+    path: "/lastDonate",
+    element: <LastDonate/>,
+  },
+  {
+    path: "/change-password",
+    element: <PasswordChange/>,
+  },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
