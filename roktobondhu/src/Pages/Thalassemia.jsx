@@ -21,36 +21,45 @@ const Thalassemia = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <Navbar />
       <div className="max-w-[1140px] mx-auto w-full p-3">
-        <h2 className="w-[max-content] text-[22px] py-[10px] px-[60px] text-white bg-red-600 rounded-full font-[700] my-5 mx-auto">
+        <h2 className="w-[max-content] text-[22px] py-[10px] px-[60px] text-white bg-primary rounded-full font-[700] my-5 mx-auto">
           থ্যালাসেমিয়াঃ
         </h2>
         <div className="mb-[50px]">
           <p className="text-center text-[15px] text-black my-[30px]">
             লক্ষ্য ও উদ্দেশ্যঃ থ্যালাসেমিয়া রোগিদের নির্দিষ্ট সময় অন্তর অন্তর
-            রক্ত গ্রহণ করতে হয়। কারো প্রতিমাসে, অনেকের প্রায় দুই মাস তিন মাস পরপর
-            রক্তের প্রয়োজন হয়। এতে তাদের সবসময়ই পরবর্তী রক্তদাতার খোঁজে
+            রক্ত গ্রহণ করতে হয়। কারো প্রতিমাসে, অনেকের প্রায় দুই মাস তিন মাস
+            পরপর রক্তের প্রয়োজন হয়। এতে তাদের সবসময়ই পরবর্তী রক্তদাতার খোঁজে
             দুশ্চিন্তাগ্রস্ত থাকতে হয়। আর্থিক ও মানষিক চাপ পরিবারের সদস্যদেরও
             অকৃত্রিম হাসি বিলীন করে দেয়। আমরা রক্তবন্ধুর মাধ্যমে তাদের তথ্যগুলো
-            সংগ্রহ করতে চাই এবং প্রতিটি রোগিকে কিছু নির্দিষ্ট সংখ্যক আগ্রহী ব্লাড
-            ডোনার দিয়ে যতোদূর সম্ভব চিন্তামুক্ত রাখার সামান্য উদ্যোগ গ্রহণ করেছি,{" "}
-            <Link to={"/thalassemia-details"} className="text-blue-600" href="#">
+            সংগ্রহ করতে চাই এবং প্রতিটি রোগিকে কিছু নির্দিষ্ট সংখ্যক আগ্রহী
+            ব্লাড ডোনার দিয়ে যতোদূর সম্ভব চিন্তামুক্ত রাখার সামান্য উদ্যোগ গ্রহণ
+            করেছি,{" "}
+            <Link
+              to={"/thalassemia-details"}
+              className="text-blue-600"
+              href="#"
+            >
               আরোও পড়ুন...
             </Link>
           </p>
         </div>
         <div className="md:flex items-start gap-8 mb-20">
-          <div className="md:w-1/2 w-full max-h-[content] border border-red-600 ">
-            <h3 className="md:text-[23px] text-[14px] leading-[28px] text-center bg-red-600 p-[17px] text-white font-[600]">
-              আপনার এলাকার কিংবা পরিচিত যে কোন এলাকার থ্যালাসেমিয়া রোগির তথ্য দিন
+          <div className="md:w-1/2 w-full max-h-[content] border border-primary ">
+            <h3 className="md:text-[23px] text-[14px] leading-[28px] text-center bg-primary p-[17px] text-white font-[600]">
+              আপনার এলাকার কিংবা পরিচিত যে কোন এলাকার থ্যালাসেমিয়া রোগির তথ্য
+              দিন
             </h3>
             <div className="p-[40px] shadow-xl">
               <form onSubmit={(e) => e.preventDefault()}>
                 <div className="mb-6">
-                  <label htmlFor="name" className="block mb-3 text-sm text-black">
-                    রোগির নামঃ <span className="text-red-500">*</span>
+                  <label
+                    htmlFor="name"
+                    className="block mb-3 text-sm text-black"
+                  >
+                    রোগির নামঃ <span className="text-primary">*</span>
                   </label>
                   <input
                     type="text"
@@ -65,7 +74,7 @@ const Thalassemia = () => {
                     htmlFor="blood_group"
                     className="block mb-3 text-sm text-black"
                   >
-                    রক্তের গ্রুপঃ <span className="text-red-500">*</span>
+                    রক্তের গ্রুপঃ <span className="text-primary">*</span>
                   </label>
                   <select
                     type="text"
@@ -87,7 +96,7 @@ const Thalassemia = () => {
                     htmlFor="district"
                     className="block mb-3 text-sm text-black"
                   >
-                    জেলাঃ <span className="text-red-500">*</span>
+                    জেলাঃ <span className="text-primary">*</span>
                   </label>
                   <select
                     type="text"
@@ -111,7 +120,7 @@ const Thalassemia = () => {
                     htmlFor="police_station"
                     className="block mb-3 text-sm text-black"
                   >
-                    থানাঃ <span className="text-red-500">*</span>
+                    থানাঃ <span className="text-primary">*</span>
                   </label>
                   <input
                     type="text"
@@ -126,7 +135,7 @@ const Thalassemia = () => {
                     htmlFor="village"
                     className="block mb-3 text-sm text-black"
                   >
-                    গ্রামের নামঃ <span className="text-red-500">*</span>
+                    গ্রামের নামঃ <span className="text-primary">*</span>
                   </label>
                   <input
                     type="text"
@@ -141,7 +150,7 @@ const Thalassemia = () => {
                     htmlFor="guardian_name"
                     className="block mb-3 text-sm text-black"
                   >
-                    অভিভাবকের নামঃ <span className="text-red-500">*</span>
+                    অভিভাবকের নামঃ <span className="text-primary">*</span>
                   </label>
                   <input
                     type="text"
@@ -156,7 +165,7 @@ const Thalassemia = () => {
                     htmlFor="contact_number"
                     className="block mb-3 text-sm text-black"
                   >
-                    মোবাইল নাম্বারঃ <span className="text-red-500">*</span>
+                    মোবাইল নাম্বারঃ <span className="text-primary">*</span>
                   </label>
                   <input
                     type="text"
@@ -195,18 +204,18 @@ const Thalassemia = () => {
                     required
                   />
                 </div>
-                <button className="px-[44px] py-[9px] bg-black text-white hover:bg-red-600 duration-1000 font-[700]">
+                <button className="px-[44px] py-[9px] bg-black text-white hover:bg-primary duration-1000 font-[700]">
                   সাবমিট করুন
                 </button>
               </form>
             </div>
           </div>
           <div className="md:w-1/2 w-full md:mt-0 mt-5">
-            <h3 className="md:text-[23px] text-[14px] leading-[28px] text-center bg-red-600 p-[17px] text-white font-[600]">
-              আপনার আশেপাশে থাকা কোন থ্যালাসেমিয়া রোগিকে রক্ত উপহার দিয়ে সহযোগিতা
-              করতে চাইলে ফরম পূরণ করুন
+            <h3 className="md:text-[23px] text-[14px] leading-[28px] text-center bg-primary p-[17px] text-white font-[600]">
+              আপনার আশেপাশে থাকা কোন থ্যালাসেমিয়া রোগিকে রক্ত উপহার দিয়ে
+              সহযোগিতা করতে চাইলে ফরম পূরণ করুন
             </h3>
-            <div className="p-[40px] shadow-xl border border-red-600">
+            <div className="p-[40px] shadow-xl border border-primary">
               <h2 className="text-black">
                 RoktoBondhu.com এ রক্তদাতা হিসাবে রেজিস্ট্রেশন করা আছে?
               </h2>
@@ -220,7 +229,7 @@ const Thalassemia = () => {
                 </button>
                 <button
                   onClick={() => handleClick("no")}
-                  className="py-2 px-5 bg-red-500 hover:bg-red-700 rounded duration-500 flex items-center gap-2"
+                  className="py-2 px-5 bg-primary text-white hover:bg-red-700 rounded duration-500 flex items-center gap-2"
                 >
                   <Check />
                   না
@@ -235,7 +244,7 @@ const Thalassemia = () => {
                         className="block mb-3 text-sm text-black"
                       >
                         রক্তবন্ধুতে রেজিস্ট্রেশনকৃত মোবাইল নাম্বারঃ
-                        <span className="text-red-500"> *</span>
+                        <span className="text-primary"> *</span>
                       </label>
                       <input
                         type="text"
@@ -245,7 +254,7 @@ const Thalassemia = () => {
                         required
                       />
                     </div>
-                    <button className="px-[44px] py-[9px] bg-black text-white hover:bg-red-600 duration-1000 font-[700]">
+                    <button className="px-[44px] py-[9px] bg-black text-white hover:bg-primary duration-1000 font-[700]">
                       সাবমিট করুন
                     </button>
                   </form>
@@ -259,7 +268,7 @@ const Thalassemia = () => {
                         htmlFor="noRegName"
                         className="block mb-3 text-sm text-black"
                       >
-                        নামঃ <span className="text-red-500"> *</span>
+                        নামঃ <span className="text-primary"> *</span>
                       </label>
                       <input
                         type="text"
@@ -275,7 +284,7 @@ const Thalassemia = () => {
                           htmlFor="parmanent_district"
                           className="block mb-3 text-sm text-black"
                         >
-                          জেলাঃ <span className="text-red-500">*</span>
+                          জেলাঃ <span className="text-primary">*</span>
                         </label>
                         <select
                           type="text"
@@ -299,7 +308,7 @@ const Thalassemia = () => {
                           htmlFor="parmanent_address"
                           className="block mb-3 text-sm text-black"
                         >
-                          ঠিকানা <span className="text-red-500"> *</span>
+                          ঠিকানা <span className="text-primary"> *</span>
                         </label>
                         <input
                           type="text"
@@ -316,7 +325,7 @@ const Thalassemia = () => {
                           htmlFor="current_district"
                           className="block mb-3 text-sm text-black"
                         >
-                          জেলাঃ <span className="text-red-500">*</span>
+                          জেলাঃ <span className="text-primary">*</span>
                         </label>
                         <select
                           type="text"
@@ -340,7 +349,7 @@ const Thalassemia = () => {
                           htmlFor="current_address"
                           className="block mb-3 text-sm text-black"
                         >
-                          ঠিকানা <span className="text-red-500"> *</span>
+                          ঠিকানা <span className="text-primary"> *</span>
                         </label>
                         <input
                           type="text"
@@ -371,7 +380,7 @@ const Thalassemia = () => {
                         className="block mb-3 text-sm text-black"
                       >
                         মোবাইল নাম্বার ( ইংরেজি ){" "}
-                        <span className="text-red-500"> *</span>
+                        <span className="text-primary"> *</span>
                       </label>
                       <input
                         type="text"
@@ -386,7 +395,7 @@ const Thalassemia = () => {
                         htmlFor="reg_blood_group"
                         className="block mb-3 text-sm text-black"
                       >
-                        রক্তের গ্রুপঃ <span className="text-red-500">*</span>
+                        রক্তের গ্রুপঃ <span className="text-primary">*</span>
                       </label>
                       <select
                         type="text"
@@ -409,7 +418,7 @@ const Thalassemia = () => {
                         className="block mb-3 text-sm text-black"
                       >
                         সর্বশেষ রক্ত দানের তারিখ
-                        <span className="text-red-500"> *</span>
+                        <span className="text-primary"> *</span>
                       </label>
                       <div className="grid grid-cols-3 gap-1">
                         <select
@@ -498,7 +507,7 @@ const Thalassemia = () => {
                       </div>
                     </div>
                     <div className="mb-6">
-                      <p className="text-red-500">
+                      <p className="text-primary">
                         নারী ডোনারদের ফোন নম্বর গোপন রাখা হবে।
                       </p>
                     </div>
@@ -508,7 +517,7 @@ const Thalassemia = () => {
                         className="block mb-3 text-sm text-black"
                       >
                         পাসওয়ার্ড
-                        <span className="text-red-500"> *</span>
+                        <span className="text-primary"> *</span>
                       </label>
                       <input
                         type="password"
@@ -524,7 +533,7 @@ const Thalassemia = () => {
                         className="block mb-3 text-sm text-black"
                       >
                         কনফার্ম পাসওয়ার্ড
-                        <span className="text-red-500"> *</span>
+                        <span className="text-primary"> *</span>
                       </label>
                       <input
                         type="text"
@@ -534,7 +543,7 @@ const Thalassemia = () => {
                         required
                       />
                     </div>
-                    <button className="px-[44px] py-[9px] bg-black text-white hover:bg-red-600 duration-1000 font-[700]">
+                    <button className="px-[44px] py-[9px] bg-black text-white hover:bg-primary duration-1000 font-[700]">
                       রেজিস্ট্রেশন
                     </button>
                   </form>
@@ -545,7 +554,7 @@ const Thalassemia = () => {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 

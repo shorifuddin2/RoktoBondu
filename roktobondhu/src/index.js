@@ -1,34 +1,33 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Kobitas from "./components/Blogs/Kobita/Kobitas";
-import PoemDetails from "./components/Blogs/Kobita/PoemDetails";
-import Campaigns from "./components/Blogs/Campaign/Campaigns";
-import CampaignDetails from "./components/Blogs/Campaign/CampaignDetails";
-import Blogs_Details from "./components/Blogs/Blogs_Details";
 import Anuperona from "./components/Blogs/Anuperona";
-import Roktototthyo from "./components/Blogs/Category/Roktototthyo/Roktototthyo";
-import Roktototthyo_Details from "./components/Blogs/Category/Roktototthyo/Roktototthyo_Details";
+import Blogs_Details from "./components/Blogs/Blogs_Details";
+import Campaigns from "./components/Blogs/Campaign/Campaigns";
 import First_roktodan from "./components/Blogs/Category/First-roktodan/First-roktodan";
 import First_roktodan_Details from "./components/Blogs/Category/First-roktodan/First-roktodan_Details";
-import Blogs from "./Pages/Blog";
+import Roktototthyo from "./components/Blogs/Category/Roktototthyo/Roktototthyo";
+import Roktototthyo_Details from "./components/Blogs/Category/Roktototthyo/Roktototthyo_Details";
+import Kobitas from "./components/Blogs/Kobita/Kobitas";
+import RoktodanExpreience from "./components/Blogs/RoktodanExperience/RoktodanExperience";
+import RoktodanStory from "./components/Blogs/RoktodanStory/RoktodanStory";
+import First_Page from "./components/First_Page/First_Page";
+import "./index.css";
+import Blog from "./Pages/Blog";
+import GalleryBlog from "./Pages/GalleryBlog/GalleryBlog";
+import Login from "./Pages/Login";
+import NewsBlog from "./Pages/NewsBlog/NewsBlog";
+import Platelet from "./Pages/platelet/Platelet";
+import LastDonate from "./Pages/Profile/LastDonate";
+import PasswordChange from "./Pages/Profile/PasswordChange";
+import Profile from "./Pages/Profile/Profile";
+import ProfileSideNavbar from "./Pages/Profile/ProfileSideNavbar";
+import Registration from "./Pages/Registration";
 import Sohojogi from "./Pages/Sohojogi";
 import Thalassemia from "./Pages/Thalassemia";
 import ThalassemiaDetails from "./Pages/ThalassemiaDetails";
-import Login from "./Pages/Login";
-import Registration from "./Pages/Registration";
 import Volunteers from "./Pages/Volunteers/Volunteers";
-import GalleryBlog from "./Pages/GalleryBlog/GalleryBlog";
-import GalleryBlogDetails from "./Pages/GalleryBlog/GalleryBlogDetails";
-import NewsBlog from "./Pages/NewsBlog/NewsBlog";
-import NewsBlogDetails from "./Pages/NewsBlog/NewsBlogDetails";
-import Blog from "./Pages/Blog";
-import Platelet from "./Pages/platelet/Platelet";
-import First_Page from "./components/First_Page/First_Page";
-import RoktodanExpreience from "./components/Blogs/RoktodanExperience/RoktodanExperience";
-import RoktodanStory from "./components/Blogs/RoktodanStory/RoktodanStory";
+import reportWebVitals from "./reportWebVitals";
 
 const router = createBrowserRouter([
   {
@@ -80,7 +79,7 @@ const router = createBrowserRouter([
     element: <Kobitas />,
   },
   {
-    path: "/blogs/ক্যাম্পেইন নিউজ",
+    path: "/blogs/ক্যাম্পেইন-নিউজ",
     element: <Campaigns />,
   },
   {
@@ -108,28 +107,28 @@ const router = createBrowserRouter([
     element: <RoktodanStory />,
   },
   {
-    path: "/blogs/রক্তবন্ধু গ্যালারি",
-    element: <GalleryBlog />
+    path: "/blogs/রক্তবন্ধু-গ্যালারি",
+    element: <GalleryBlog />,
   },
   {
     path: "/blogs/সংবাদ",
-    element: <NewsBlog />
+    element: <NewsBlog />,
   },
   {
     path: "/profile-sideNavbar",
-    element: <ProfileSideNavbar/>,
+    element: <ProfileSideNavbar />,
   },
   {
     path: "/profile",
-    element: <Profile/>,
+    element: <Profile />,
   },
   {
     path: "/lastDonate",
-    element: <LastDonate/>,
+    element: <LastDonate />,
   },
   {
     path: "/change-password",
-    element: <PasswordChange/>,
+    element: <PasswordChange />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
