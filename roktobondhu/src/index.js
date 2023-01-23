@@ -11,10 +11,10 @@ import Roktototthyo_Details from "./components/Blogs/Category/Roktototthyo/Rokto
 import Kobitas from "./components/Blogs/Kobita/Kobitas";
 import RoktodanExpreience from "./components/Blogs/RoktodanExperience/RoktodanExperience";
 import RoktodanStory from "./components/Blogs/RoktodanStory/RoktodanStory";
-import First_Page from "./components/First_Page/First_Page";
 import "./index.css";
 import Blog from "./Pages/Blog";
 import GalleryBlog from "./Pages/GalleryBlog/GalleryBlog";
+import HomePage from "./Pages/HomePage/HomePage";
 import Login from "./Pages/Login";
 import NewsBlog from "./Pages/NewsBlog/NewsBlog";
 import Platelet from "./Pages/platelet/Platelet";
@@ -32,7 +32,7 @@ import reportWebVitals from "./reportWebVitals";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <First_Page />,
+    element: <HomePage />,
   },
   {
     path: "/platelet",
