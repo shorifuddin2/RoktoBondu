@@ -59,7 +59,7 @@ const HomePage = () => {
                         ))}
                       </select>
                     </div>
-                    <button className="bg-[#ED0404]  py-2 px-11 border border-solid border-[1px] border-white rounded-3xl mt-3 font-bold">
+                    <button className="bg-[#ED0404] hover:bg-black  py-2 px-11 border border-solid border-[1px] border-white rounded-3xl mt-3 font-bold transition duration-300 ease-in">
                       {" "}
                       <FontAwesomeIcon icon={faMagnifyingGlass} /> খুঁজুন
                     </button>
@@ -101,7 +101,7 @@ const HomePage = () => {
                         ))}
                       </select>
                     </div>
-                    <button className="bg-[#ED0404] py-2 px-11 border border-solid border-[1px] border-white rounded-3xl mt-3 font-bold">
+                    <button className="bg-[#ED0404] hover:bg-black py-2 px-11 border border-solid border-[1px] border-white rounded-3xl mt-3 font-bold transition duration-300 ease-in">
                       {" "}
                       <FontAwesomeIcon icon={faMagnifyingGlass} /> খুঁজুন
                     </button>
@@ -116,7 +116,7 @@ const HomePage = () => {
       <section className="container pl-1  lg:pl-0">
         <div className="pt-20 pl-10 lg:pt-28 lg:ml-[35%]">
           <a href="#">
-            <button className="bg-[#ED0404] hover:bg-[#000] py-3 px-14  -ml-[3%]  lg:ml-0 lg:py-4 lg:px-24 rounded-3xl lg:rounded-full transition duration-200 ease-in">
+            <button className="bg-[#ED0404] hover:bg-[#000] py-3 px-14  -ml-[3%]  lg:ml-0 lg:py-4 lg:px-24 rounded-3xl lg:rounded-full transition duration-300 ease-in">
               রক্তবন্ধু হতে রেজিস্ট্রেশন করুন
             </button>
           </a>
