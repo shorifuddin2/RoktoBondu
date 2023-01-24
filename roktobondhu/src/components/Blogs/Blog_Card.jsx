@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Blog_Title from "../Common/Blog_Title";
 
 const Blog_Card = ({ data }) => {
   const navigate = useNavigate();
