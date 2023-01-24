@@ -55,7 +55,7 @@ const HomePage = () => {
                         className="text-black w-[282px] lg:w-full py-2 my-2 rounded-sm pl-2"
                       >
                         {DistrictName.map((dt) => (
-                          <option key={dt.id}> {dt.district} </option>
+                          <option key={dt.id} className="text-[#ff0000] cursor-pointer"> {dt.district} </option>
                         ))}
                       </select>
                     </div>
@@ -97,12 +97,11 @@ const HomePage = () => {
                         className="text-black w-[282px] lg:w-full py-2 my-2 rounded-sm pl-2"
                       >
                         {DistrictName.map((dt) => (
-                          <option key={dt.id}> {dt.district} </option>
+                          <option key={dt.id} className="text-[#ff0000] cursor-pointer"> {dt.district} </option>
                         ))}
                       </select>
                     </div>
                     <button className="bg-[#ED0404] hover:bg-black py-2 px-11 border border-solid border-[1px] border-white rounded-3xl mt-3 font-bold transition duration-300 ease-in">
-                      {" "}
                       <FontAwesomeIcon icon={faMagnifyingGlass} /> খুঁজুন
                     </button>
                   </div>
