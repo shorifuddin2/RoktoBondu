@@ -19,7 +19,6 @@ const Blogs_Details = () => {
     setLeatestData(data.filter((e) => e.id <= 2));
   }, []);
 
-  console.log(blogData);
   const {
     id,
     title,

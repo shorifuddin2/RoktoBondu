@@ -8,7 +8,6 @@ import blogCardData from "./blog.card.json";
 import Pagination from "./Pagination";
 
 const Blogs = () => {
-  console.log(blogCardData);
   return (
     <Container>
       <Blog_Title title="রক্তবন্ধু ব্লগ" />
