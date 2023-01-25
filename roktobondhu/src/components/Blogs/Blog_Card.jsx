@@ -1,12 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Blog_Title from "../Common/Blog_Title";
 
 const Blog_Card = ({ data }) => {
   const navigate = useNavigate();
   const { title, author, date, details, id, img } = data;
   return (
-    <div className=" w-[350px] relative h-[537px]  bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="xs:w-full sm:w-full md:w-[300px] lg:w-[350px] relative h-[537px]  bg-white shadow-lg rounded-lg overflow-hidden">
       <div className="blog_card_img w-full h-[200px] ">
         <img src={img} className="w-full h-full" alt="" />
       </div>
