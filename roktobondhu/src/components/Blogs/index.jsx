@@ -11,7 +11,7 @@ const Blogs = () => {
   return (
     <Container>
       <Blog_Title title="রক্তবন্ধু ব্লগ" />
-      <div className=" flex gap-3 mt-12 flex-wrap">
+      <div className=" flex gap-3 mt-12 flex-wrap w-full">
         {bloggbtn.map((e, i) => (
           <Blog_Button key={i + 1} data={e} />
         ))}

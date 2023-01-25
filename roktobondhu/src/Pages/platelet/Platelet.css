@@ -1,0 +1,34 @@
+select:focus {
+    outline:none;
+}
+.platelet-group{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;  
+}
+
+label.custom-select {
+    position: relative;
+    display: inline-block;  
+}
+/* Select new arrow styling */
+.icon-upper:after {
+    content: "\25B2";
+    position: absolute;
+    top: 0;
+    left: calc(100% - 27px);
+    font-size: 50%;
+    padding: 10px 7px;
+    color: black;
+    pointer-events: none;
+}
+.icon-down:before {
+    content: "\25BC";
+    position: absolute;
+    top: 2px;
+    left: calc(100% - 27px);
+    font-size: 50%;
+    padding: 17px 7px;
+    color: black;
+    pointer-events: none;
+}

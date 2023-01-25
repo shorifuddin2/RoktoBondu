@@ -1,7 +1,7 @@
 import React from "react";
 
 const Platelet = () => {
-  return <div></div>;
+  return <div>Platelet</div>;
 };
 
 export default Platelet;

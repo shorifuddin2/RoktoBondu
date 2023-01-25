@@ -1,0 +1,60 @@
+/* Container CSS Start */
+
+.volunteerContainer,
+.galleryBlogContainer {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.volunteerCardBoxShadow {
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0px 0px 5px #0000002e;
+}
+
+.imageShawdow {
+    box-shadow: 0 0 20px #ccc;
+}
+
+@media screen {
+
+    @media (max-width: 575px) {
+
+        .volunteerContainer,
+        .galleryBlogContainer {
+            width: 75%;
+        }
+    }
+
+    @media (min-width: 576px) {
+
+        .volunteerContainer,
+        .galleryBlogContainer {
+            max-width: 520px;
+        }
+    }
+
+    @media (min-width: 768px) {
+
+        .volunteerContainer,
+        .galleryBlogContainer {
+            max-width: 720px;
+        }
+    }
+
+    @media (min-width: 992px) {
+
+        .volunteerContainer,
+        .galleryBlogContainer {
+            max-width: 960px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+
+        .volunteerContainer,
+        .galleryBlogContainer {
+            max-width: 1140px;
+        }
+    }
+}

@@ -1,4 +1,6 @@
 import React from "react";
+import Footer from "../../Pages/Footer/Footer";
+import Navbar from "../../Pages/Navbar/Navbar";
 import Blog_Title from "../Common/Blog_Title";
 import Container from "../Common/Container";
 import data from "./blog.card.json";

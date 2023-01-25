@@ -1,0 +1,35 @@
+input:focus{
+    outline: none;
+    border: 1px solid black;
+}
+
+.field_set{
+   border:2px dashed black;
+  }
+  input[type=radio] {
+    width: 25px;
+    height: 1.1rem;
+}
+.radio-button{
+    border: none !important;
+}
+input[type='radio']:after {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    top: -1px;
+    left: 2.5px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    
+    
+}
+
+input[type='radio']:checked:after {
+    display: none;
+    
+}
+
