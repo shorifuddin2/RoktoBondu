@@ -33,6 +33,7 @@ import LastDonate from "./Pages/Profile/LastDonate";
 import ProfileSideNavbar from "./Pages/Profile/ProfileSideNavbar";
 import Profile from "./Pages/Profile/Profile";
 import PasswordChange from "./Pages/Profile/PasswordChange";
+import SingleRoktodanExperience from "./components/Blogs/RoktodanExperience/SingleRoktodanExperience";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -105,6 +106,10 @@ const router = createBrowserRouter([
   {
     path: "/blogs/রক্তদানের-অভিজ্ঞতা",
     element: <RoktodanExpreience />,
+  },
+  {
+    path: "/blogs/রক্তদানের-অভিজ্ঞতা/:id",
+    element: <SingleRoktodanExperience />,
   },
   {
     path: "/blogs/রক্তদানের-গল্প",
