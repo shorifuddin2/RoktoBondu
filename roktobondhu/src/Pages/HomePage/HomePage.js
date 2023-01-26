@@ -1,5 +1,6 @@
 import React from "react";
 import "./HomePage.css";
+import { Link } from "react-router-dom";
 
 //importing font Awesome
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
@@ -14,6 +15,7 @@ import FbIcon from "../../assets/images/HomePage_images/fb_icon.jpg";
 import PlayStoreIcon from "../../assets/images/HomePage_images/playStore_icon.png";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
+
 
 const HomePage = () => {
   return (
@@ -59,10 +61,11 @@ const HomePage = () => {
                         ))}
                       </select>
                     </div>
-                    <button className="bg-[#ED0404] hover:bg-black  py-2 px-11 border border-solid border-[1px] border-white rounded-3xl mt-3 font-bold transition duration-300 ease-in">
-                      {" "}
-                      <FontAwesomeIcon icon={faMagnifyingGlass} /> খুঁজুন
-                    </button>
+                   <Link to= "/APlusBloodSearch">
+                      <button className="bg-[#ED0404] hover:bg-black  py-2 px-11 border border-solid border-[1px] border-white rounded-3xl mt-3 font-bold transition duration-300 ease-in">
+                        <FontAwesomeIcon icon={faMagnifyingGlass} /> খুঁজুন
+                      </button>
+                    </Link>  
                   </div>
                 </form>
               </div>
@@ -114,21 +117,21 @@ const HomePage = () => {
       {/* section-2 (after header part)*/}
       <section className="container pl-1  lg:pl-0">
         <div className="pt-20 pl-10 lg:pt-28 lg:ml-[35%]">
-          <a href="#">
+          <Link to = "/Registration">
             <button className="bg-[#ED0404] hover:bg-[#000] py-3 px-14  -ml-[3%]  lg:ml-0 lg:py-4 lg:px-24 rounded-3xl lg:rounded-full transition duration-300 ease-in">
               রক্তবন্ধু হতে রেজিস্ট্রেশন করুন
             </button>
-          </a>
+          </Link>
         </div>
         <div className="mt-7 ml-3 lg:ml-[40.5%]">
           <p className="text-black inline mr-4 lg:mr-2">
             প্লাটিলেট ডোনার হতে চাইলে{" "}
           </p>
-          <a href="#">
+          <Link to = "/platelet">
             <button className="bg-[#28A745] text-white  py-1 lg:py-2 px-2 lg:px-3 rounded-3xl lg:rounded-full hover:bg-[#218838] transition duration-200 ease-in">
               রেজিস্ট্রেশন করুন
             </button>
-          </a>
+          </Link>
         </div>
         <div className="pl-2 mt-28 lg:flex container lg:ml-[5%] lg:pl-0 lg:items-start">
           <div className="lg:mr-16 lg:pl-14 lg:w-[500px]">
@@ -136,20 +139,20 @@ const HomePage = () => {
               রক্তবন্ধু ব্লাড কার্ড{" "}
             </h1>
             <p className="text-black">এখনি ডাউনলোড করে ফেলুন আপনার কার্ডটি </p>
-            <a href="#">
-              {" "}
-              <button className="bg-[#28A745] py-2 px-8 border border-solid border-[1px] border-white rounded-3xl mt-3 font-bold hover:bg-[#218838] transition duration-200 ease-in">
-                {" "}
-                কার্ড তৈরি করুন{" "}
+            <Link to="/Card">
+              <button className="bg-[#28A745] py-2 px-8 border border-solid border-[1px] border-white rounded-3xl mt-3 font-bold hover:bg-[#218838] transition duration-200 ease-in">  
+                কার্ড তৈরি করুন
               </button>
-            </a>
+            </Link>
             <p className="text-black mt-10">কিভাবে কার্ড তৈরি করব?</p>
             <a href="#">
               {" "}
-              <button className="bg-[#DC3545] py-2 px-8 border border-solid border-[1px] border-white rounded-3xl mt-3 font-bold hover:bg-[#c82333] transition duration-200 ease-in">
-                {" "}
-                ভিডিও টি দেখুন{" "}
-              </button>{" "}
+              <a href="https://www.youtube.com/watch?v=3KCCNraVjYM&feature=youtu.be&ab_channel=AshikurRahman" target="blank">
+                <button className="bg-[#DC3545] py-2 px-8 border border-solid border-[1px] border-white rounded-3xl mt-3 font-bold hover:bg-[#c82333] transition duration-200 ease-in">
+                  {" "}
+                  ভিডিও টি দেখুন{" "}
+                </button>{" "}
+              </a>
             </a>
           </div>
           <img

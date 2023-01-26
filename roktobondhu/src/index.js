@@ -33,6 +33,8 @@ import LastDonate from "./Pages/Profile/LastDonate";
 import ProfileSideNavbar from "./Pages/Profile/ProfileSideNavbar";
 import Profile from "./Pages/Profile/Profile";
 import PasswordChange from "./Pages/Profile/PasswordChange";
+import APlusBloodSearch from "./Pages/APlusBloodSearch/APlusBloodSearch";
+import Card from "./components/Blogs/RoktodanExperience/Card";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -134,6 +136,14 @@ const router = createBrowserRouter([
     path: "/change-password",
     element: <PasswordChange/>,
   },
+  {
+    path: "/APlusBloodSearch",
+    element: <APlusBloodSearch />,
+  },
+  {
+    path: "/Card",
+    element: <Card />,
+  }
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
