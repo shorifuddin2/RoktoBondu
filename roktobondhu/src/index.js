@@ -33,6 +33,10 @@ import LastDonate from "./Pages/Profile/LastDonate";
 import ProfileSideNavbar from "./Pages/Profile/ProfileSideNavbar";
 import Profile from "./Pages/Profile/Profile";
 import PasswordChange from "./Pages/Profile/PasswordChange";
+import APlusBloodSearch from "./Pages/APlusBloodSearch/APlusBloodSearch";
+import Card from "./components/Blogs/RoktodanExperience/Card";
+import SingleRoktodanExperience from "./components/Blogs/RoktodanExperience/SingleRoktodanExperience";
+import CardMaking from "./Pages/CardMaking/CardMaking";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -152,7 +156,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/Card",
-    element: <Card />,
+    element: <CardMaking />,
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
