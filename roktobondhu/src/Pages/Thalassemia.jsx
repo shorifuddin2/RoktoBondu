@@ -14,7 +14,6 @@ const Thalassemia = () => {
     async function fetchData() {
       const response = await fetch("districts.json");
       const json = await response.json();
-      console.log(json);
       setDistricts(json);
     }
     fetchData();
@@ -52,7 +51,7 @@ const Thalassemia = () => {
               আপনার এলাকার কিংবা পরিচিত যে কোন এলাকার থ্যালাসেমিয়া রোগির তথ্য
               দিন
             </h3>
-            <div className="p-[40px] shadow-xl">
+            <div className="lg:p-[40px] p-[20px] shadow-xl">
               <form onSubmit={(e) => e.preventDefault()}>
                 <div className="mb-6">
                   <label
@@ -215,7 +214,7 @@ const Thalassemia = () => {
               আপনার আশেপাশে থাকা কোন থ্যালাসেমিয়া রোগিকে রক্ত উপহার দিয়ে
               সহযোগিতা করতে চাইলে ফরম পূরণ করুন
             </h3>
-            <div className="p-[40px] shadow-xl border border-primary">
+            <div className="lg:p-[40px] p-[20px] shadow-xl border border-primary">
               <h2 className="text-black">
                 RoktoBondhu.com এ রক্তদাতা হিসাবে রেজিস্ট্রেশন করা আছে?
               </h2>

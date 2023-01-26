@@ -6,8 +6,8 @@ const ThalassemiaDetails = () => {
   return (
     <>
       <Navbar />
-      <div className="max-w-[1140px] mx-auto w-full p-3">
-        <h2 className="w-[max-content] text-[22px] py-[10px] px-[60px] text-white bg-primary rounded-full font-[700] my-5 mx-auto">
+      <div className="max-w-[1140px] mx-auto w-full p-5">
+        <h2 className="w-[max-content] md:text-[22px] text-[14px] py-[10px] px-[60px] text-white bg-primary rounded-full font-[700] my-5 mx-auto">
           থ্যালাসেমিয়া বিস্তারিতঃ
         </h2>
         <div className="text-black text-[15px] space-y-5">
