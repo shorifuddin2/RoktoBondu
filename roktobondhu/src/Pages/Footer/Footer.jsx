@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css'
 
 const Footer = () => {
@@ -8,7 +9,7 @@ const Footer = () => {
 
                 <div className='mx-auto font-bold'>
                     <span className="mx-auto text-white"><span className='text-red-500'>নোটিশঃ</span> রক্তবন্ধুর সাথে কাজ করতে চাইলে, রক্তবন্ধু সম্পর্কে জানতে, পাসওয়ার্ড ভুলে গেলে যোগাযোগ করুন <span className='text-red-500'>01716626487, 01778951824</span></span>
-                    <span className='mx-auto btn bg-red-500 hover:bg-red-600 text-white'>রক্তবন্ধু সম্পর্কে  বিস্তারিত জানতে ক্লিক করুন</span>
+                    <span className='mx-auto btn bg-red-500 hover:bg-red-600 text-white'><Link to="/blog">রক্তবন্ধু সম্পর্কে  বিস্তারিত জানতে ক্লিক করুন</Link></span>
                 </div>
 
             </footer>

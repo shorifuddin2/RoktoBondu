@@ -33,12 +33,10 @@ import LastDonate from "./Pages/Profile/LastDonate";
 import ProfileSideNavbar from "./Pages/Profile/ProfileSideNavbar";
 import Profile from "./Pages/Profile/Profile";
 import PasswordChange from "./Pages/Profile/PasswordChange";
-import APlusBloodSearch from "./Pages/APlusBloodSearch/APlusBloodSearch";
-import Card from "./components/Blogs/RoktodanExperience/Card";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage/>,
+    element: <HomePage />,
   },
   {
     path: "/platelet",
@@ -109,32 +107,44 @@ const router = createBrowserRouter([
     element: <RoktodanExpreience />,
   },
   {
+    path: "/blogs/রক্তদানের-অভিজ্ঞতা/:id",
+    element: <SingleRoktodanExperience />,
+  },
+  {
     path: "/blogs/রক্তদানের-গল্প",
     element: <RoktodanStory />,
   },
   {
-    path: "/blogs/রক্তবন্ধু গ্যালারি",
+    path: "/blogs/রক্তবন্ধু-গ্যালারি",
     element: <GalleryBlog />
+  },
+  {
+    path: "/blogs/রক্তবন্ধু-গ্যালারি/:id",
+    element: <GalleryBlogDetails />
   },
   {
     path: "/blogs/সংবাদ",
     element: <NewsBlog />
   },
   {
+    path: "/blogs/সংবাদ/:id",
+    element: <NewsBlogDetails />
+  },
+  {
     path: "/profile-sideNavbar",
-    element: <ProfileSideNavbar/>,
+    element: <ProfileSideNavbar />,
   },
   {
     path: "/profile",
-    element: <Profile/>,
+    element: <Profile />,
   },
   {
     path: "/lastDonate",
-    element: <LastDonate/>,
+    element: <LastDonate />,
   },
   {
     path: "/change-password",
-    element: <PasswordChange/>,
+    element: <PasswordChange />,
   },
   {
     path: "/APlusBloodSearch",

@@ -1,7 +1,11 @@
 import React from "react";
 
 const Container = ({ children }) => {
-  return <div className="lg:mx-[105px] md:[50px] my-10">{children}</div>;
+  return (
+    <div className=" xs:w-[320px] sm:w-[380px] md:w-[940px] lg:w-[1140px] m-auto">
+      {children}
+    </div>
+  );
 };
 
 export default Container;

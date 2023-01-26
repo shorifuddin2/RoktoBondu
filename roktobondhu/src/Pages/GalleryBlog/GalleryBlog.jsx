@@ -19,7 +19,7 @@ const GalleryBlog = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {" "}
           {galleryBlogData?.map((galleryData) => (
-            <GalleryBlogCard galleryData={galleryData} />
+            <GalleryBlogCard id={galleryBlogData?.blog_id} galleryData={galleryData} />
           ))}
         </div>
         <Pagination />
