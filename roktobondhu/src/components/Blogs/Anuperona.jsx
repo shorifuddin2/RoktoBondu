@@ -8,20 +8,16 @@ import Blog_Card from "./Blog_Card";
 import Pagination from "./Pagination";
 const Anuperona = () => {
   return (
-    <div>
-      <Navbar />
-      <Container>
-        <Blog_Title title="পোষ্ট সমূহ" />
-        <div className=" flex gap-8 mt-12 flex-wrap justify-between">
-          {" "}
-          {data.map((e) => (
-            <Blog_Card data={e} />
-          ))}
-        </div>
-        <Pagination />
-      </Container>
-      <Footer />
-    </div>
+    <Container>
+      <Blog_Title title="পোষ্ট সমূহ" />
+      <div className=" flex gap-8 mt-12 flex-wrap justify-between">
+        {" "}
+        {data.map((e, i) => (
+          <Blog_Card key={i + 1} data={e} />
+        ))}
+      </div>
+      <Pagination />
+    </Container>
   );
 };
 

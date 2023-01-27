@@ -6,8 +6,8 @@ import { AiFillFacebook } from "react-icons/ai";
 import { FaTwitterSquare, FaLinkedin, FaWhatsappSquare } from "react-icons/fa";
 import Blog_Card from "./Blog_Card";
 import Blog_Title from "../Common/Blog_Title";
-import Navbar from "../../Pages/Navbar/Navbar";
 import Footer from "../../Pages/Footer/Footer";
+import Navbar from "../../Pages/Navbar/Navbar";
 
 const Blogs_Details = () => {
   const params = useParams();
@@ -20,7 +20,6 @@ const Blogs_Details = () => {
     setLeatestData(data.filter((e) => e.id <= 2));
   }, []);
 
-  console.log(blogData);
   const {
     id,
     title,
@@ -140,8 +139,8 @@ const Blogs_Details = () => {
           <Blog_Title title="সর্বশেষ পোষ্ট সমূহ" />
           <div className=" flex gap-8 mt-12 flex-wrap justify-between">
             {" "}
-            {leatestData.map((e) => (
-              <Blog_Card data={e} />
+            {leatestData.map((e, i) => (
+              <Blog_Card key={i} data={e} />
             ))}
           </div>
         </div>
