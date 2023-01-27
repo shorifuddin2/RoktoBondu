@@ -25,7 +25,7 @@ const CardMaking = () => {
             <input type="text" placeholder='Type your Name...' className='rounded w-full lg:w-[59%] p-2 pl-3 text-black border border-gray-300'/>
             <p  className='mt-5 text-black'>Blood Group:</p>
             <label className='custom-select icon-upper icon-down   mt-4'>
-                      <select name='bloodGroup' className='platelet-group pl-3 border rounded text-black border border-gray-300 lg:w-[565px] lg:h-10 w-[444px] sm:h-10 h-[40px]'>
+                      <select name='bloodGroup' className='platelet-group pl-3 rounded text-black border border-gray-300 lg:w-[565px] lg:h-10 w-[444px] sm:h-10 h-[40px]'>
                         <option>A+</option>
                         <option>A-</option>
                         <option>B+</option>
