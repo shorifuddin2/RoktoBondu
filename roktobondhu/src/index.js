@@ -29,11 +29,9 @@ import Platelet from "./Pages/platelet/Platelet";
 import HomePage from './Pages/HomePage/HomePage';
 import RoktodanExpreience from "./components/Blogs/RoktodanExperience/RoktodanExperience";
 import RoktodanStory from "./components/Blogs/RoktodanStory/RoktodanStory";
-<<<<<<< HEAD
 import AllPlatelet from "./Pages/platelet/AllPlatelet";
 
 
-=======
 import LastDonate from "./Pages/Profile/LastDonate";
 import ProfileSideNavbar from "./Pages/Profile/ProfileSideNavbar";
 import Profile from "./Pages/Profile/Profile";
@@ -42,7 +40,6 @@ import APlusBloodSearch from "./Pages/APlusBloodSearch/APlusBloodSearch";
 import Card from "./components/Blogs/RoktodanExperience/Card";
 import SingleRoktodanExperience from "./components/Blogs/RoktodanExperience/SingleRoktodanExperience";
 import CardMaking from "./Pages/CardMaking/CardMaking";
->>>>>>> d092fdf00ad835a20c74128db5269c9ea5014e75
 const router = createBrowserRouter([
   {
     path: "/",
@@ -141,29 +138,12 @@ const router = createBrowserRouter([
     path: "/blogs/সংবাদ",
     element: <NewsBlog />
   },
-<<<<<<< HEAD
 
-=======
   {
     path: "/blogs/সংবাদ/:id",
     element: <NewsBlogDetails />
   },
-  {
-    path: "/profile-sideNavbar",
-    element: <ProfileSideNavbar />,
-  },
-  {
-    path: "/profile",
-    element: <Profile />,
-  },
-  {
-    path: "/lastDonate",
-    element: <LastDonate />,
-  },
-  {
-    path: "/change-password",
-    element: <PasswordChange />,
-  },
+
   {
     path: "/APlusBloodSearch",
     element: <APlusBloodSearch />,
@@ -172,7 +152,6 @@ const router = createBrowserRouter([
     path: "/Card",
     element: <CardMaking />,
   }
->>>>>>> d092fdf00ad835a20c74128db5269c9ea5014e75
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
