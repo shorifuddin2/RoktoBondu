@@ -29,6 +29,8 @@ import Platelet from "./Pages/platelet/Platelet";
 import First_Page from "./components/First_Page/First_Page";
 import RoktodanExpreience from "./components/Blogs/RoktodanExperience/RoktodanExperience";
 import RoktodanStory from "./components/Blogs/RoktodanStory/RoktodanStory";
+import AllPlatelet from "./Pages/platelet/AllPlatelet";
+
 
 const router = createBrowserRouter([
   {
@@ -39,6 +41,11 @@ const router = createBrowserRouter([
     path: "/platelet",
     element: <Platelet />,
   },
+  {
+    path: "/all-platelet-search",
+    element: <AllPlatelet/>,
+  },
+
   {
     path: "/thalassemia",
     element: <Thalassemia />,
@@ -115,22 +122,7 @@ const router = createBrowserRouter([
     path: "/blogs/সংবাদ",
     element: <NewsBlog />
   },
-  {
-    path: "/profile-sideNavbar",
-    element: <ProfileSideNavbar/>,
-  },
-  {
-    path: "/profile",
-    element: <Profile/>,
-  },
-  {
-    path: "/lastDonate",
-    element: <LastDonate/>,
-  },
-  {
-    path: "/change-password",
-    element: <PasswordChange/>,
-  },
+
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

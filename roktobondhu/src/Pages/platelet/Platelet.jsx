@@ -33,7 +33,7 @@ const Platelet = () => {
         {
           selectedCus.length > 0 ? <section>
             <h1 className='text-base-100 text-center mb-24'><span className='bg-rose-600 lg:px-10 md:px-5 sm:px-3 py-2 rounded-full lg:text-xl md:text-xl sm:text-sm font-bold'>A+ প্লাটিলেট রক্তবন্ধুর তালিকা</span></h1>
-            <AllPlatelet selectedCus={selectedCus}></AllPlatelet>
+            <AllPlatelet  districts={districts} selectedCus={selectedCus}></AllPlatelet>
           </section> : <>
             <section>
               <div className='grid lg:grid-cols-2 sm:grid-cols-1'>
@@ -75,7 +75,7 @@ const Platelet = () => {
                 <div className='flex items-center justify-center sm:mt-5'>
                   <div>
                     <div className='lg:flex md:flex sm:flex-none items-center gap-x-5'>
-                      <h5 className='text-black'>প্লাটিলেট ডোনার হতে চাইলে</h5>
+                      <h5 className='text-black mt-4'>প্লাটিলেট ডোনার হতে চাইলে</h5>
                       <div>
                         <button className='bg-secondary text-base-100 px-8 rounded-full py-2 sm:mt-3'>রেজিস্ট্রেশন করুন</button>
                       </div>
