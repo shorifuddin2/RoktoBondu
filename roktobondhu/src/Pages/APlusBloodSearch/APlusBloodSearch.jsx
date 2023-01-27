@@ -10,10 +10,10 @@ const APlusBloodSearch = () => {
         <section>
             <Navbar/>
 
-            <button className="bg-[#ED0404] py-3 px-14  lg:ml-[40%] lg:mt-8 lg:py-2.5 lg:px-16 rounded-3xl lg:rounded-full font-black text-lg">
+            <button className="bg-[#ED0404] py-2 px-7 ml-[28%] mt-4 lg:ml-[40%] lg:mt-8 lg:py-2.5 lg:px-16 rounded-3xl lg:rounded-full font-black text-base lg:text-lg">
                 A+ রক্তবন্ধুর তালিকা
             </button>
-          <table className='table-auto border-separate border-spacing-x-0.5 border-spacing-y-0.5 border border-black mx-auto lg:mt-8 lg:mb-24'>
+          <table className='table-auto border-separate border-spacing-x-0.5 border-spacing-y-0.5 border border-black mx-auto mt-8 lg:mb-24'>
                 <thead>
                     <tr className='text-white bg-[#ED0404]'>
                         <th className='p-3'> নং </th>
