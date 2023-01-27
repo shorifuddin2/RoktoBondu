@@ -7,19 +7,19 @@ const AllPlatelet = ({selectedCus}) => {
         <div className='grid lg:grid-cols-3 md:grid-cols-4 sm:grid-cols-1 text-black gap-5 mb-5'>
             
                 {
-                  selectedCus.map(bloodCustmer =>{
+                  selectedCus.map(bloodCustomer =>{
                     return (
                     <div className=' text-center'>
-                           <span className='rounded-full bg-primary px-4 py-4 text-xl font-bold text-base-100'>{bloodCustmer.bloodGroup}</span>
+                           <span className='rounded-full bg-primary px-4 py-4 text-xl font-bold text-base-100'>{bloodCustomer.bloodGroup}</span>
                         <div className='border-2 border-primary'>
                                 <div className=' p-5'>
-                                    <h1>{bloodCustmer.name}</h1>
-                                    <p>ঠিকানা:{bloodCustmer.address}</p>
-                                    <p>নিজ জেলাঃ{bloodCustmer.district}</p>
-                                    <p>যোগাযোগ:{bloodCustmer.contact}</p>
+                                    <h1>{bloodCustomer.name}</h1>
+                                    <p>ঠিকানা:{bloodCustomer.address}</p>
+                                    <p>নিজ জেলাঃ{bloodCustomer.district}</p>
+                                    <p>যোগাযোগ:{bloodCustomer.contact}</p>
                                     <h1 className='bg-primary text-base-100 py-1'>সর্বশেষ রক্তদান</h1>
-                                    <p>{bloodCustmer.lastBloodDonate}</p>
-                                    <p>{bloodCustmer.totalDays}দিন আগে...</p>
+                                    <p>{bloodCustomer.lastBloodDonate}</p>
+                                    <p>{bloodCustomer.totalDays}দিন আগে...</p>
                                 
                                 </div>
                                 <div className='bg-primary flex justify-between text-base-100'>

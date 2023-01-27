@@ -29,6 +29,9 @@ import Platelet from "./Pages/platelet/Platelet";
 import HomePage from './Pages/HomePage/HomePage';
 import RoktodanExpreience from "./components/Blogs/RoktodanExperience/RoktodanExperience";
 import RoktodanStory from "./components/Blogs/RoktodanStory/RoktodanStory";
+import AllPlatelet from "./Pages/platelet/AllPlatelet";
+
+
 import LastDonate from "./Pages/Profile/LastDonate";
 import ProfileSideNavbar from "./Pages/Profile/ProfileSideNavbar";
 import Profile from "./Pages/Profile/Profile";
@@ -46,6 +49,11 @@ const router = createBrowserRouter([
     path: "/platelet",
     element: <Platelet />,
   },
+  {
+    path: "/all-platelet-search",
+    element: <AllPlatelet/>,
+  },
+
   {
     path: "/thalassemia",
     element: <Thalassemia />,
@@ -130,26 +138,12 @@ const router = createBrowserRouter([
     path: "/blogs/সংবাদ",
     element: <NewsBlog />
   },
+
   {
     path: "/blogs/সংবাদ/:id",
     element: <NewsBlogDetails />
   },
-  {
-    path: "/profile-sideNavbar",
-    element: <ProfileSideNavbar />,
-  },
-  {
-    path: "/profile",
-    element: <Profile />,
-  },
-  {
-    path: "/lastDonate",
-    element: <LastDonate />,
-  },
-  {
-    path: "/change-password",
-    element: <PasswordChange />,
-  },
+
   {
     path: "/APlusBloodSearch",
     element: <APlusBloodSearch />,
