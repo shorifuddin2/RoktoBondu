@@ -146,7 +146,11 @@ const router = createBrowserRouter([
   {
     path: "/Card",
     element: <CardMaking />,
-  }
+  },
+  {
+    path: "/all-platelet-search",
+    element: <AllPlatelet/>,
+  },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
