@@ -12,7 +12,7 @@ const NavbarBlog = () => {
             <label tabIndex={0} className="btn btn-ghost lg:hidden ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-auto w-10"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -27,30 +27,15 @@ const NavbarBlog = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 shadow bg-base-100 rounded-box w-52 text-red-500 font-bold"
+              className="menu menu-compact dropdown-content mt-3 mx-20 shadow bg-base-100 rounded-box w-100 text-red-500 font-bold"
             >
-              <li className="blog m-2">
-                <Link to="/blog">ব্লগ</Link>
-              </li>
-
-              <li className="hover m-2">
-                <Link to="/">রক্তবন্ধু খুঁজুন</Link>
-              </li>
-              <li className="hover m-2">
-                <Link to="/blogs/ক্যাম্পেইন-নিউজ">ক্যাম্পেইন নিউজ</Link>
-              </li>
-              <li className="hover m-2">
-                <Link to="/blogs/প্রথম-রক্তদান">প্রথম রক্তদান </Link>
-              </li>
-              <li className="hover m-2">
-                <Link to="/blogs/রক্তদানের-অভিজ্ঞতা">রক্তদানের অভিজ্ঞতা </Link>
-              </li>
-              <li className="hover m-2">
-                <Link to="/blogs/রক্তদানের-গল্প">রক্তদানের গল্প</Link>
-              </li>
-              <li className="hover m-2">
-                <Link to="/blogs/রক্তবন্ধু গ্যালারি">রক্তবন্ধু গ্যালারি</Link>
-              </li>
+              <li className="blog m-2 "><Link className="text-center mx-auto" to="/blog">ব্লগ</Link></li>
+              <li className="hover px-5 py-2"><Link className="text-center mx-auto" to="/">রক্তবন্ধু খুঁজুন</Link></li>
+              <li className="hover px-5 py-2"><Link className="text-center mx-auto" to="/blogs/ক্যাম্পেইন-নিউজ">ক্যাম্পেইন নিউজ</Link></li>
+              <li className="hover px-5 py-2"><Link className="text-center mx-auto" to="/blogs/প্রথম-রক্তদান">প্রথম রক্তদান </Link></li>
+              <li className="hover px-5 py-2"><Link className="text-center mx-auto" to="/blogs/রক্তদানের-অভিজ্ঞতা">রক্তদানের অভিজ্ঞতা </Link></li>
+              <li className="hover px-5 py-2"><Link className="text-center mx-auto" to="/blogs/রক্তদানের-গল্প">রক্তদানের গল্প</Link></li>
+              <li className="hover px-5 py-2"><Link className="text-center mx-auto" to="/blogs/রক্তবন্ধু গ্যালারি">রক্তবন্ধু গ্যালারি</Link></li>
             </ul>
           </div>
           <Link to="/" className="">
@@ -66,7 +51,7 @@ const NavbarBlog = () => {
               <Link to="/">রক্তবন্ধু খুঁজুন</Link>
             </li>
             <li className="hover m-2">
-              <Link to="/blogs/ক্যাম্পেইন-নিউজ">ক্যাম্পেইন নিউজ</Link>
+              <Link to="/blogs/ক্যাম্পেইন%20নিউজ">ক্যাম্পেইন নিউজ</Link>
             </li>
             <li className="hover m-2">
               <Link to="/blogs/প্রথম-রক্তদান">প্রথম রক্তদান</Link>
