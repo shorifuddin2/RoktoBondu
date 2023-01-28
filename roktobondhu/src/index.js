@@ -1,19 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Kobitas from "./components/Blogs/Kobita/Kobitas";
-import PoemDetails from "./components/Blogs/Kobita/PoemDetails";
 import Campaigns from "./components/Blogs/Campaign/Campaigns";
-import CampaignDetails from "./components/Blogs/Campaign/CampaignDetails";
 import Blogs_Details from "./components/Blogs/Blogs_Details";
 import Anuperona from "./components/Blogs/Anuperona";
 import Roktototthyo from "./components/Blogs/Category/Roktototthyo/Roktototthyo";
 import Roktototthyo_Details from "./components/Blogs/Category/Roktototthyo/Roktototthyo_Details";
 import First_roktodan from "./components/Blogs/Category/First-roktodan/First-roktodan";
 import First_roktodan_Details from "./components/Blogs/Category/First-roktodan/First-roktodan_Details";
-import Blogs from "./Pages/Blog";
 import Sohojogi from "./Pages/Sohojogi";
 import Thalassemia from "./Pages/Thalassemia";
 import ThalassemiaDetails from "./Pages/ThalassemiaDetails";
@@ -25,7 +22,7 @@ import GalleryBlogDetails from "./Pages/GalleryBlog/GalleryBlogDetails";
 import NewsBlog from "./Pages/NewsBlog/NewsBlog";
 import NewsBlogDetails from "./Pages/NewsBlog/NewsBlogDetails";
 import Blog from "./Pages/Blog";
-import HomePage from './Pages/HomePage/HomePage';
+import HomePage from "./Pages/HomePage/HomePage";
 import RoktodanExpreience from "./components/Blogs/RoktodanExperience/RoktodanExperience";
 import RoktodanStory from "./components/Blogs/RoktodanStory/RoktodanStory";
 import AllPlatelet from "./Pages/platelet/AllPlatelet";
@@ -42,11 +39,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/platelet",
-    element: <PlateletContent/>,
+    element: <PlateletContent />,
   },
   {
     path: "/all-platelet-search",
-    element: <AllPlatelet/>,
+    element: <AllPlatelet />,
   },
 
   {
@@ -123,20 +120,20 @@ const router = createBrowserRouter([
   },
   {
     path: "/blogs/রক্তবন্ধু-গ্যালারি",
-    element: <GalleryBlog />
+    element: <GalleryBlog />,
   },
   {
     path: "/blogs/রক্তবন্ধু-গ্যালারি/:id",
-    element: <GalleryBlogDetails />
+    element: <GalleryBlogDetails />,
   },
   {
     path: "/blogs/সংবাদ",
-    element: <NewsBlog />
+    element: <NewsBlog />,
   },
 
   {
     path: "/blogs/সংবাদ/:id",
-    element: <NewsBlogDetails />
+    element: <NewsBlogDetails />,
   },
 
   {
@@ -149,7 +146,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/all-platelet-search",
-    element: <AllPlatelet/>,
+    element: <AllPlatelet />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
