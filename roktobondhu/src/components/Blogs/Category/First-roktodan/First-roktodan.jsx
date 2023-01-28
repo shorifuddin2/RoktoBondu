@@ -5,7 +5,8 @@ import data from "./First-roktodan.card.json";
 import Blog_Card from "./First-roktodan_Card";
 import Pagination from "../../Pagination";
 import NavbarBlog from "../../../../Pages/Navbar/NavbarBlog/NavbarBlog";
-const Roktodaner = () => {
+import Footer from '../../../../Pages/Footer/Footer';
+const First_roktodan = () => {
   return (
     <div>
       <NavbarBlog></NavbarBlog>
@@ -19,8 +20,10 @@ const Roktodaner = () => {
         </div>
         <Pagination />
       </Container>
+      <Footer/>
+      
     </div>
   );
 };
 
-export default Roktodaner;
+export default First_roktodan;

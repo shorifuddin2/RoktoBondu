@@ -19,7 +19,7 @@ const Roktototthyo_Card = ({ data }) => {
       </div>
       <div
         onClick={() => navigate(`/blogs/category/roktototthoy/${id}`)}
-        className="card-tbn hover:bg-black rounded-full absolute bottom-6 mx-8 py-2 text-white px-6 bg-red-600 inline-block"
+        className="card-tbn hover:bg-black rounded-full absolute bottom-6 mx-8 py-2 text-white px-6 bg-primary inline-block"
       >
         বিস্তারিত দেখুন...
       </div>

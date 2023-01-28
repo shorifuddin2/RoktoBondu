@@ -5,6 +5,7 @@ import data from "./Roktototthyo.card.json";
 import Roktotothyo_Card from "./Roktototthyo_Card";
 import Pagination from "../../Pagination";
 import NavbarBlog from "../../../../Pages/Navbar/NavbarBlog/NavbarBlog";
+import Footer from '../../../../Pages/Footer/Footer';
 
 const Roktototthyo = () => {
   return (
@@ -20,6 +21,7 @@ const Roktototthyo = () => {
       </div>
       <Pagination />
     </Container>
+    <Footer/>
     </div>
   );
 };
