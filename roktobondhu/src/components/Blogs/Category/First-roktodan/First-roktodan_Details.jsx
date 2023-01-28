@@ -147,6 +147,7 @@ const First_roktodan_Details = () => {
               <Blog_Card key={i} data={e} />
             ))}
           </div>
+          
         </div>
       </Container>
       <Footer/>
