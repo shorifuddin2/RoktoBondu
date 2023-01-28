@@ -13,7 +13,7 @@ const AllPlatelet = ({selectedCus}) => {
       <div className='lg:mx-28 sm:mx-10 mt-16'>
           <h1 className='text-base-100 text-center mb-24'><span className='bg-rose-600 lg:px-10 md:px-5 sm:px-3 py-2 rounded-full lg:text-xl md:text-xl sm:text-sm font-bold'> A+ প্লাটিলেট রক্তবন্ধুর তালিকা</span></h1>
 
-<div className='grid lg:grid-cols-3 md:grid-cols-4 sm:grid-cols-1 text-black gap-5 mb-5'>
+<div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 text-black gap-5 mb-5'>
   
   {
     platelets.map(bloodCustomer =>{
