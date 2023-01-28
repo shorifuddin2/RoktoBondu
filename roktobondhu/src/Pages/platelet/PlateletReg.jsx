@@ -20,7 +20,7 @@ const PlateletReg = () => {
                      <h5 className='text-black'>নাম<span className='text-primary'>*</span></h5>
                   </div>
                    <div>
-                       <input type="text" className='border pl-3 rounded lg:w-full lg:h-10 md:w-full sm:w-64 sm:h-10' name="name" required  placeholder='নাম' id="" />
+                       <input type="text" className='border pl-3 rounded lg:w-full lg:h-10 md:w-full sm:w-full xs:w-full sm:h-10 md:h-10 xs:h-10' name="name" required  placeholder='নাম' />
                    </div>
                    <div className='mt-5'>
                       <fieldset className='field_set'>
@@ -29,9 +29,9 @@ const PlateletReg = () => {
                                 <div className='ml-3 mt-5'>
                                     <h5 className='text-black'>জেলা<span className='text-primary'>*</span></h5>
                                 </div>
-                                <div className='ml-3'>
+                                <div className='mx-3'>
                                 <label className='custom-select icon-upper icon-down mt-4'>
-                                    <select className='platelet-group pl-2 border rounded text-black lg:w-[540px] lg:h-10 md:w-full sm:w-60 sm:h-10' >
+                                    <select className='platelet-group pl-2 border rounded text-black lg:w-[540px] lg:h-10 md:h-10 md:w-[540px] sm:w-[400px] xs:w-[260px] sm:h-10 xs:h-10' >
                                         <option>ঢাকা</option>
                                         <option>চট্টগ্রাম</option>
                                         <option>সিলেট</option>
@@ -44,7 +44,7 @@ const PlateletReg = () => {
                                         <h5 className='text-black'>ঠিকানা<span className='text-primary'>*</span></h5>
                                     </div>
                                     <div className='ml-3 mt-4 mb-5'>
-                                        <input type="text" className='border pl-3 rounded lg:w-[540px] lg:h-10 md:w-full sm:w-60 sm:h-10' name="name" required  placeholder='ঠিকানা' id="" />
+                                        <input type="text" className='border pl-3 rounded lg:w-[540px] lg:h-10 md:h-10 md:w-[540px] sm:w-[400px] xs:w-[260px] sm:h-10 xs:h-10' name="name" required  placeholder='ঠিকানা' />
                                     </div>
                       </fieldset>
                    </div>
@@ -57,7 +57,7 @@ const PlateletReg = () => {
                                 </div>
                                 <div className='ml-3'>
                               <label className='custom-select icon-upper icon-down mt-4'>
-                                <select className='platelet-group pl-2 border rounded text-black lg:w-[540px] lg:h-10 md:w-full sm:w-60 sm:h-10'>
+                                <select className='platelet-group pl-2 border rounded text-black lg:w-[540px] lg:h-10 md:h-10 md:w-[540px] sm:w-[400px] xs:w-[260px] sm:h-10 xs:h-10'>
                                  {
                                    districts.map(district =><option key={district.id}>{district.bn_name}</option>)
                                  }
@@ -68,28 +68,28 @@ const PlateletReg = () => {
                                         <h5 className='text-black'>ঠিকানা<span className='text-primary'>*</span></h5>
                                     </div>
                                     <div className='ml-3 mt-4 mb-5'>
-                                        <input type="text" className='border pl-3 rounded lg:w-[540px] lg:h-10 md:w-full sm:w-60 sm:h-10' name="name" required  placeholder='ঠিকানা' id="" />
+                                        <input type="text" className='border pl-3 rounded lg:w-[540px] lg:h-10 md:h-10 md:w-[540px] sm:w-[400px] xs:w-[260px] sm:h-10 xs:h-10' name="name" required  placeholder='ঠিকানা' />
                                     </div>
                       </fieldset>
                                      <div className=' mt-5'>
                                         <h5 className='text-black'>ইমেইল ঠিকানা (যদি থাকে)</h5>
                                     </div>
                                     <div className=' mt-4 mb-5'>
-                                        <input type="text" className='border pl-3 rounded lg:w-full lg:h-10 md:w-full sm:w-64 sm:h-10' name="name" required  placeholder='ইমেইল' id="" />
+                                        <input type="text" className='border pl-3 rounded lg:w-full lg:h-10 md:w-full sm:w-full xs:w-full sm:h-10 md:h-10 xs:h-10' name="name" required  placeholder='ইমেইল' />
                                     </div>
 
                                     <div className='mt-5'>
                                         <h5 className='text-black'>মোবাইল নাম্বার ( ইংরেজি )<span className='text-primary'>*</span></h5>
                                     </div>
                                     <div className='mt-4 mb-5'>
-                                        <input type="text" className='border pl-3 rounded lg:w-full lg:h-10 md:w-full sm:w-64 sm:h-10' name="name" required  placeholder='মোবাইল নাম্বার' id="" />
+                                        <input type="text" className='border pl-3 rounded lg:w-full lg:h-10 md:w-full sm:w-full xs:w-full sm:h-10 md:h-10 xs:h-10' name="name" required  placeholder='মোবাইল নাম্বার' />
                                     </div>
                                     <div className='mt-5'>
                                         <h5 className='text-black'>রক্তের গ্রুপ<span className='text-primary'>*</span></h5>
                                     </div>
                                     <div className='mt-4 mb-5'>
                                     <label className='custom-select icon-upper icon-down'>
-                                        <select className='platelet-group pl-2 border rounded text-black lg:w-[572px] lg:h-10 md:w-full sm:w-64 sm:h-10'>
+                                        <select className='platelet-group pl-2 border rounded text-black lg:w-[572px] lg:h-10 md:h-10 md:w-[570px] sm:w-[520px] xs:w-[290px] sm:h-10 xs:h-10'>
                                         <option>A+</option>
                                         <option>A-</option>
                                         <option>B+</option>
@@ -108,7 +108,7 @@ const PlateletReg = () => {
                                     <div className='mt-4 mb-5 flex'>
                                         <div>
                                             <label className='custom-select icon-upper icon-down'>
-                                            <select className='platelet-group pl-2 border rounded text-black  lg:w-[190px] lg:h-10 md:w-full sm:w-24 sm:h-10'>
+                                            <select className='platelet-group pl-2 border rounded text-black  lg:w-[190px] lg:h-10 md:h-10 sm:h-10 xs:h-10 md:w-[190px] sm:w-[173px] xs:w-[95px] sm:h-10 xs:h-10'>
                                               {
                                                 days.map(day => <option key={day.id}>{day.day}</option>)
                                               }
@@ -117,7 +117,7 @@ const PlateletReg = () => {
                                         </div>
                                         <div>
                                             <label className='custom-select icon-upper icon-down'>
-                                            <select className='platelet-group pl-2 border rounded text-black lg:w-[190px] lg:h-10 md:w-full sm:w-24 sm:h-10' >
+                                            <select className='platelet-group pl-2 border rounded text-black lg:w-[190px] lg:h-10 md:h-10 sm:h-10 xs:h-10 md:w-[190px] sm:w-[173px] xs:w-[95px]' >
                                                 <option>January</option>
                                                 <option>February</option>
                                                 <option>March</option>
@@ -132,7 +132,7 @@ const PlateletReg = () => {
                                         </div>
                                         <div>
                                             <label className='custom-select icon-upper icon-down'>
-                                            <select className='platelet-group pl-2 border rounded text-black lg:w-[190px] lg:h-10 md:w-full sm:w-24 sm:h-10'>
+                                            <select className='platelet-group pl-2 border rounded text-black lg:w-[190px] lg:h-10 md:h-10 sm:h-10 xs:h-10 md:w-[190px] sm:w-[170px] xs:w-[95px]'>
                                                 <option>2017</option>
                                                 <option>2018</option>
                                                 <option>2019</option>
@@ -149,7 +149,7 @@ const PlateletReg = () => {
                                              <input type="radio" name='gender' className='radio-button'/>
                                              <span className='ml-2 text-black'>পুরুষ</span>
                                         </div>
-                                        <div className='lg:ml-48 md:ml-48 sm:ml-36'>
+                                        <div className='lg:ml-48 md:ml-48 sm:ml-36 xs:ml-24'>
                                              <input type="radio" name='gender' className=''/>
                                              <span className='ml-2 text-black'>নারী</span>
                                         </div>
@@ -163,19 +163,19 @@ const PlateletReg = () => {
                                         <h5 className='text-black'>জন্ম তারিখঃ<span className='text-primary'>*</span></h5>
                                     </div>
                                     <div className='mt-4 mb-5'>
-                                        <input type="date" className='border pl-3 rounded lg:w-full lg:h-10 md:w-full sm:w-64 sm:h-10' name="name" required  placeholder='জন্ম তারিখ' id="" />
+                                        <input type="date" className='border pl-3 rounded lg:w-full lg:h-10 md:w-full sm:w-full xs:w-full sm:h-10 md:h-10 xs:h-10' name="name" required  placeholder='জন্ম তারিখ' />
                                     </div>
                                     <div className='mt-5'>
                                         <h5 className='text-black'>পাসওয়ার্ড<span className='text-primary'>*</span></h5>
                                     </div>
                                     <div className='mt-4 mb-5'>
-                                        <input type="password" className='border pl-3 rounded lg:w-full lg:h-10 md:w-full sm:w-64 sm:h-10' name="name" required  placeholder='পাসওয়ার্ড' id="" />
+                                        <input type="password" className='border pl-3 rounded lg:w-full lg:h-10 md:w-full sm:w-full xs:w-full sm:h-10 md:h-10 xs:h-10' name="name" required  placeholder='পাসওয়ার্ড'  />
                                     </div>
                                     <div className='mt-5'>
                                         <h5 className='text-black'>কনফার্ম পাসওয়ার্ড<span className='text-primary'>*</span></h5>
                                     </div>
                                     <div className='mt-4 mb-5'>
-                                        <input type="password" className='border pl-3 rounded lg:w-full lg:h-10 md:w-full sm:w-64 sm:h-10' name="name" required  placeholder='কনফার্ম পাসওয়ার্ড' id="" />
+                                        <input type="password" className='border pl-3 rounded lg:w-full lg:h-10 md:w-full sm:w-full xs:w-full sm:h-10 md:h-10 xs:h-10' name="name" required  placeholder='কনফার্ম পাসওয়ার্ড'/>
                                     </div>
                                     <div className='mb-4'>
                                         <button className='bg-primary text-base-100 px-12 rounded-full py-2 mt-3'>
