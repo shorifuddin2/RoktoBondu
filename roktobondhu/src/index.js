@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
@@ -25,21 +25,16 @@ import GalleryBlogDetails from "./Pages/GalleryBlog/GalleryBlogDetails";
 import NewsBlog from "./Pages/NewsBlog/NewsBlog";
 import NewsBlogDetails from "./Pages/NewsBlog/NewsBlogDetails";
 import Blog from "./Pages/Blog";
-import Platelet from "./Pages/platelet/Platelet";
 import HomePage from './Pages/HomePage/HomePage';
 import RoktodanExpreience from "./components/Blogs/RoktodanExperience/RoktodanExperience";
 import RoktodanStory from "./components/Blogs/RoktodanStory/RoktodanStory";
 import AllPlatelet from "./Pages/platelet/AllPlatelet";
-
-
-import LastDonate from "./Pages/Profile/LastDonate";
-import ProfileSideNavbar from "./Pages/Profile/ProfileSideNavbar";
-import Profile from "./Pages/Profile/Profile";
-import PasswordChange from "./Pages/Profile/PasswordChange";
 import APlusBloodSearch from "./Pages/APlusBloodSearch/APlusBloodSearch";
-import Card from "./components/Blogs/RoktodanExperience/Card";
 import SingleRoktodanExperience from "./components/Blogs/RoktodanExperience/SingleRoktodanExperience";
 import CardMaking from "./Pages/CardMaking/CardMaking";
+
+import PlateletContent from "./Pages/platelet/PlateletContent";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -47,7 +42,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/platelet",
-    element: <Platelet />,
+    element: <PlateletContent/>,
   },
   {
     path: "/all-platelet-search",
