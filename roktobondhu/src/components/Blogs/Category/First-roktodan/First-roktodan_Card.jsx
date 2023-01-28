@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 
-const Roktodaner_Card = ({ data }) => {
+const First_roktodan_Card = ({ data }) => {
   const navigate = useNavigate();
   const { title, author, date, details, id, img } = data;
   return (
@@ -19,7 +19,7 @@ const Roktodaner_Card = ({ data }) => {
       </div>
       <div
         onClick={() => navigate(`/blogs/category/First-roktodan/${id}`)}
-        className="card-tbn cursor-pointer hover:bg-black rounded-full absolute bottom-6 mx-8 py-2 text-white px-6 bg-red-600 inline-block"
+        className="card-tbn cursor-pointer hover:bg-black rounded-full absolute bottom-6 mx-8 py-2 text-white px-6 bg-primary inline-block"
       >
         বিস্তারিত দেখুন...
       </div>
@@ -27,4 +27,4 @@ const Roktodaner_Card = ({ data }) => {
   );
 };
 
-export default Roktodaner_Card;
+export default First_roktodan_Card;

@@ -104,7 +104,7 @@ const HomePage = () => {
                         ))}
                       </select>
                     </div>
-                    <Link to = "/platelet">
+                    <Link to = "/all-platelet-search">
                       <button className="bg-[#ED0404] hover:bg-black py-2 px-11 border border-solid border-[1px] border-white rounded-3xl mt-3 font-bold transition duration-300 ease-in">
                         <FontAwesomeIcon icon={faMagnifyingGlass} /> খুঁজুন
                       </button>
