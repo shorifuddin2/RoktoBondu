@@ -26,7 +26,7 @@ import NewsBlog from "./Pages/NewsBlog/NewsBlog";
 import NewsBlogDetails from "./Pages/NewsBlog/NewsBlogDetails";
 import Blog from "./Pages/Blog";
 import Platelet from "./Pages/platelet/Platelet";
-import HomePage from './Pages/HomePage/HomePage';
+import HomePage from "./Pages/HomePage/HomePage";
 import RoktodanExpreience from "./components/Blogs/RoktodanExperience/RoktodanExperience";
 import RoktodanStory from "./components/Blogs/RoktodanStory/RoktodanStory";
 import LastDonate from "./Pages/Profile/LastDonate";
@@ -36,7 +36,7 @@ import PasswordChange from "./Pages/Profile/PasswordChange";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage/>,
+    element: <HomePage />,
   },
   {
     path: "/platelet",
@@ -83,6 +83,10 @@ const router = createBrowserRouter([
     element: <Kobitas />,
   },
   {
+    path: "/blogs/poem/:id",
+    element: <PoemDetails />,
+  },
+  {
     path: "/blogs/ক্যাম্পেইন নিউজ",
     element: <Campaigns />,
   },
@@ -112,27 +116,27 @@ const router = createBrowserRouter([
   },
   {
     path: "/blogs/রক্তবন্ধু গ্যালারি",
-    element: <GalleryBlog />
+    element: <GalleryBlog />,
   },
   {
     path: "/blogs/সংবাদ",
-    element: <NewsBlog />
+    element: <NewsBlog />,
   },
   {
     path: "/profile-sideNavbar",
-    element: <ProfileSideNavbar/>,
+    element: <ProfileSideNavbar />,
   },
   {
     path: "/profile",
-    element: <Profile/>,
+    element: <Profile />,
   },
   {
     path: "/lastDonate",
-    element: <LastDonate/>,
+    element: <LastDonate />,
   },
   {
     path: "/change-password",
-    element: <PasswordChange/>,
+    element: <PasswordChange />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
