@@ -4,16 +4,13 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Kobitas from "./components/Blogs/Kobita/Kobitas";
-import PoemDetails from "./components/Blogs/Kobita/PoemDetails";
 import Campaigns from "./components/Blogs/Campaign/Campaigns";
-import CampaignDetails from "./components/Blogs/Campaign/CampaignDetails";
 import Blogs_Details from "./components/Blogs/Blogs_Details";
 import Anuperona from "./components/Blogs/Anuperona";
 import Roktototthyo from "./components/Blogs/Category/Roktototthyo/Roktototthyo";
 import Roktototthyo_Details from "./components/Blogs/Category/Roktototthyo/Roktototthyo_Details";
 import First_roktodan from "./components/Blogs/Category/First-roktodan/First-roktodan";
 import First_roktodan_Details from "./components/Blogs/Category/First-roktodan/First-roktodan_Details";
-import Blogs from "./Pages/Blog";
 import Sohojogi from "./Pages/Sohojogi";
 import Thalassemia from "./Pages/Thalassemia";
 import ThalassemiaDetails from "./Pages/ThalassemiaDetails";
@@ -25,14 +22,17 @@ import GalleryBlogDetails from "./Pages/GalleryBlog/GalleryBlogDetails";
 import NewsBlog from "./Pages/NewsBlog/NewsBlog";
 import NewsBlogDetails from "./Pages/NewsBlog/NewsBlogDetails";
 import Blog from "./Pages/Blog";
-import Platelet from "./Pages/platelet/Platelet";
 import HomePage from "./Pages/HomePage/HomePage";
 import RoktodanExpreience from "./components/Blogs/RoktodanExperience/RoktodanExperience";
 import RoktodanStory from "./components/Blogs/RoktodanStory/RoktodanStory";
-import LastDonate from "./Pages/Profile/LastDonate";
-import ProfileSideNavbar from "./Pages/Profile/ProfileSideNavbar";
-import Profile from "./Pages/Profile/Profile";
-import PasswordChange from "./Pages/Profile/PasswordChange";
+import AllPlatelet from "./Pages/platelet/AllPlatelet";
+import APlusBloodSearch from "./Pages/APlusBloodSearch/APlusBloodSearch";
+import SingleRoktodanExperience from "./components/Blogs/RoktodanExperience/SingleRoktodanExperience";
+import CardMaking from "./Pages/CardMaking/CardMaking";
+import PoremDetails from "./components/Blogs/Kobita/PoemDetails";
+import PlateletContent from "./Pages/platelet/PlateletContent";
+import CampaignDetails from "./components/Blogs/Campaign/CampaignDetails";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,8 +40,13 @@ const router = createBrowserRouter([
   },
   {
     path: "/platelet",
-    element: <Platelet />,
+    element: <PlateletContent />,
   },
+  {
+    path: "/all-platelet-search",
+    element: <AllPlatelet />,
+  },
+
   {
     path: "/thalassemia",
     element: <Thalassemia />,
@@ -84,11 +89,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/blogs/poem/:id",
-    element: <PoemDetails />,
+    element: <PoremDetails />,
   },
   {
     path: "/blogs/ক্যাম্পেইন নিউজ",
     element: <Campaigns />,
+  },
+  {
+    path: "/blogs/campaign/:id",
+    element: <CampaignDetails />,
   },
   {
     path: "/blogs/প্রথম-রক্তদান",
@@ -111,32 +120,42 @@ const router = createBrowserRouter([
     element: <RoktodanExpreience />,
   },
   {
+    path: "/blogs/রক্তদানের-অভিজ্ঞতা/:id",
+    element: <SingleRoktodanExperience />,
+  },
+  {
     path: "/blogs/রক্তদানের-গল্প",
     element: <RoktodanStory />,
   },
   {
-    path: "/blogs/রক্তবন্ধু গ্যালারি",
+    path: "/blogs/রক্তবন্ধু-গ্যালারি",
     element: <GalleryBlog />,
+  },
+  {
+    path: "/blogs/রক্তবন্ধু-গ্যালারি/:id",
+    element: <GalleryBlogDetails />,
   },
   {
     path: "/blogs/সংবাদ",
     element: <NewsBlog />,
   },
+
   {
-    path: "/profile-sideNavbar",
-    element: <ProfileSideNavbar />,
+    path: "/blogs/সংবাদ/:id",
+    element: <NewsBlogDetails />,
+  },
+
+  {
+    path: "/APlusBloodSearch",
+    element: <APlusBloodSearch />,
   },
   {
-    path: "/profile",
-    element: <Profile />,
+    path: "/Card",
+    element: <CardMaking />,
   },
   {
-    path: "/lastDonate",
-    element: <LastDonate />,
-  },
-  {
-    path: "/change-password",
-    element: <PasswordChange />,
+    path: "/all-platelet-search",
+    element: <AllPlatelet />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));

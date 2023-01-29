@@ -3,10 +3,11 @@ import './Platelet.css'
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
 import PlateletReg from './PlateletReg';
 import DetailsPlateletModal from './DetailsPlateletModal';
-import AllPlatelet from './AllPlatelet';
+
 import usePlatelet from '../../hooks/usePlatelet';
 import useDistrict from '../../hooks/useDistrict';
 import { Link } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
 
 const PlateletContent = () => {
     const [districts] = useDistrict();
@@ -14,6 +15,7 @@ const PlateletContent = () => {
   const [platelets] = usePlatelet()
   const [selectedCus, setSelectedCus] = useState([])
   const [searchingGroup, setSearchingGroup] = useState({})
+  
   const handleSubmit = (e)=>{
     e.preventDefault()
     const bloodGroup = e.target?.bloodGroup?.value;
@@ -31,13 +33,10 @@ const PlateletContent = () => {
 
   }
   return (
+    <>
+    <Navbar/>
     <div className='lg:mx-28 sm:mx-10 mt-16'>
 
-      {
-          selectedCus.length >0?  <section>
-          <h1 className='text-base-100 text-center mb-24'><span className='bg-rose-600 lg:px-10 md:px-5 sm:px-3 py-2 rounded-full lg:text-xl md:text-xl sm:text-sm font-bold'>{searchingGroup.bloodGroup} প্লাটিলেট রক্তবন্ধুর তালিকা</span></h1>
-         <AllPlatelet selectedCus={selectedCus}></AllPlatelet>
-        </section>: <>
         <section>
           <div className='grid lg:grid-cols-2 sm:grid-cols-1'>
                 <form onSubmit={handleSubmit}>
@@ -78,7 +77,7 @@ const PlateletContent = () => {
               <div className='flex items-center justify-center sm:mt-5'>
                    <div>
                         <div className='lg:flex md:flex sm:flex-none items-center gap-x-5'>
-                            <h5 className='text-black'>প্লাটিলেট ডোনার হতে চাইলে</h5>
+                            <h5 className='mt-4 text-black'>প্লাটিলেট ডোনার হতে চাইলে</h5>
                             <div>
                                 <button className='bg-secondary text-base-100 px-8 rounded-full py-2 sm:mt-3'><a href='#registration' className='no-underline'>রেজিস্ট্রেশন করুন</a></button>
                             </div>
@@ -111,11 +110,18 @@ const PlateletContent = () => {
            <PlateletReg></PlateletReg>
            
        </section>
-        </>
-            }
+       
        
     </div>
+    </>
+    
   );
 };
 
 export default PlateletContent;
+
+     
+        //   selectedCus.length >0?  <section>
+        //   <h1 className='text-base-100 text-center mb-24'><span className='bg-rose-600 lg:px-10 md:px-5 sm:px-3 py-2 rounded-full lg:text-xl md:text-xl sm:text-sm font-bold'>{searchingGroup.bloodGroup} প্লাটিলেট রক্তবন্ধুর তালিকা</span></h1>
+        //  <AllPlatelet selectedCus={selectedCus}></AllPlatelet>
+        // </section>: <>

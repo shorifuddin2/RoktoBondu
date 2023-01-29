@@ -10,7 +10,7 @@ const Sohojogi = () => {
       <Navbar />
       <Container>
         <div className="w-full flex justify-center">
-          <h1 className=" bg-red-600 mt-16 font-bold inline-block rounded-full px-10 py-4 text-white">
+          <h1 className=" bg-primary mt-16 font-bold inline-block rounded-full px-10 py-4 text-white">
             সহযোগী সংগঠন
           </h1>
         </div>
