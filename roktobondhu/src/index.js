@@ -29,8 +29,9 @@ import AllPlatelet from "./Pages/platelet/AllPlatelet";
 import APlusBloodSearch from "./Pages/APlusBloodSearch/APlusBloodSearch";
 import SingleRoktodanExperience from "./components/Blogs/RoktodanExperience/SingleRoktodanExperience";
 import CardMaking from "./Pages/CardMaking/CardMaking";
-
+import PoremDetails from "./components/Blogs/Kobita/PoemDetails";
 import PlateletContent from "./Pages/platelet/PlateletContent";
+import CampaignDetails from "./components/Blogs/Campaign/CampaignDetails";
 
 const router = createBrowserRouter([
   {
@@ -87,8 +88,16 @@ const router = createBrowserRouter([
     element: <Kobitas />,
   },
   {
+    path: "/blogs/poem/:id",
+    element: <PoremDetails />,
+  },
+  {
     path: "/blogs/ক্যাম্পেইন নিউজ",
     element: <Campaigns />,
+  },
+  {
+    path: "/blogs/campaign/:id",
+    element: <CampaignDetails />,
   },
   {
     path: "/blogs/প্রথম-রক্তদান",
