@@ -25,8 +25,6 @@ const Navbar = () => {
                             <li className='hover px-20 py-2'><Link className='text-center mx-auto' to="/registration">রেজিস্ট্রেশন</Link></li>
                         </ul>
                     </div>
-
-
                 </div>
                 <div className="text-sm  navbar-end mx-20 w-full   hidden lg:flex">
                     <ul className=" menu menu-horizontal text-red-500 font-bold">
