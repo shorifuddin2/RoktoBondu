@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const thelassemia = require("./routes/thelassemiaRoute.js");
+const thelassemia = require("./routes/thelassemiaRoute.js"); //thelassemia router
 var cors = require("cors");
 const app = express();
 app.use(cors());
@@ -8,7 +8,7 @@ app.use(express.json());
 const port = process.env.PORT || 4000;
 
 // routes for user
-app.use("/api/thelassemia", thelassemia);
+app.use("/api/thelassemia", thelassemia); //thelassemia
 
 // connect to MongoDB
 mongoose.set("strictQuery", false);
@@ -22,5 +22,5 @@ mongoose
     });
   })
   .catch((error) => {
-    console.log(error);
+    console.log(error.message);
   });
