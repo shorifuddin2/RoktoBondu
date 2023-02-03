@@ -46,7 +46,6 @@ const router = createBrowserRouter([
     path: "/all-platelet-search",
     element: <AllPlatelet />,
   },
-
   {
     path: "/thalassemia",
     element: <Thalassemia />,

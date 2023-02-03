@@ -5,9 +5,25 @@ import "./Login.css";
 import Navbar from "./Navbar/Navbar";
 
 const Login = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
+
   const onSubmit = async (data) => {
-    console.log(data);
+
+    fetch('http://localhost:4000/api/user/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then(data => {
+        if (data?.token) {
+          localStorage.setItem("accessToken", data?.token);
+          reset();
+        }
+      })
+
   };
 
   return (

@@ -1,23 +1,28 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const thelassemia = require("./routes/thelassemiaRoute.js");
-var cors = require("cors");
+const cors = require("cors");
 const app = express();
-app.use(cors());
-app.use(express.json());
 const port = process.env.PORT || 4000;
+const userRoute = require("./routes/user.Route");
+
+/* Application Middleware */
+app.use(express.json());
+app.use(cors())
+
+/** Home Route **/
+app.get("", (req, res) => {
+  res.send("Roktobondho Server Side")
+})
 
 // routes for user
 
 // connect to MongoDB
 mongoose.set('strictQuery', true)
 mongoose
-  .connect(
-    "mongodb://ecommerce:8u5qgGf7dec5l7AA@cluster0-shard-00-00.jjwmo.mongodb.net:27017,cluster0-shard-00-01.jjwmo.mongodb.net:27017,cluster0-shard-00-02.jjwmo.mongodb.net:27017/users?ssl=true&replicaSet=atlas-3rw3w5-shard-0&authSource=admin&retryWrites=true&w=majority"
-  )
+  .connect("mongodb+srv://roktobondhuapi:PLKv7ExYU89w2oEp@cluster0.d89bc7r.mongodb.net/?retryWrites=true&w=majority")
   .then(() => {
-    app.listen(port, () => {
-      console.log("The Roktobondhu app is running on port : ", port);
+    app.listen(port, (req, res) => {
+      console.log(`App listening on PORT : ${port}`);
     });
   })
   .catch((error) => {
