@@ -5,7 +5,7 @@ import Navbar from "./Navbar/Navbar";
 import "./Registration.css";
 
 const Registration = () => {
-  const { register, watch, handleSubmit, formState: { errors } } = useForm();
+  const { register, watch, handleSubmit, reset, formState: { errors } } = useForm();
   const [districts, setDistricts] = useState([]);
   const [day, setDay] = useState([]);
   const [month, setMonth] = useState([]);
@@ -36,7 +36,24 @@ const Registration = () => {
   }, [])
 
   const onSubmit = async (data) => {
-    console.log(data);
+    const { donation_day, donation_month, donation_year, ...existPropertey } = data;
+    const lastDonationDate = `${donation_day}-${donation_month}-${donation_year}`
+    const registration = { ...existPropertey, lastDonationDate }
+
+    fetch('http://localhost:4000/api/user/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(registration),
+    })
+      .then((response) => response.json())
+      .then(data => {
+        if (data?.token) {
+          localStorage.setItem("accessToken", data?.token);
+          reset();
+        }
+      })
   };
 
   return (
@@ -59,7 +76,8 @@ const Registration = () => {
 
             <div className="px-4 py-3">
               <label>জেলা <span className="text-red-600 text-[20px]">*</span></label>
-              <select defaultValue="null" {...register("permanent_district")} className="input border-slate-400 rounded h-2/5 w-full my-3 py-2">
+              <select {...register("permanent_district")} className="input border-slate-400 rounded h-2/5 w-full my-3 py-2">
+                <option defaultValue="কুমিল্লা" value="কুমিল্লা">কুমিল্লা</option>
                 {
                   districts.map(option => <option key={option.id} value={option.bn_name}>{option.bn_name}</option>)
                 }
@@ -78,6 +96,7 @@ const Registration = () => {
             <div className="px-4 py-3">
               <label>জেলা <span className="text-red-600 text-[20px]">*</span></label>
               <select defaultValue="null" {...register("present_district")} className="input border-slate-400 rounded h-2/5 w-full my-3 py-2">
+                <option defaultValue="কুমিল্লা" value="কুমিল্লা">কুমিল্লা</option>
                 {
                   districts.map(option => <option key={option.id} value={option.bn_name}>{option.bn_name}</option>)
                 }
@@ -92,7 +111,7 @@ const Registration = () => {
 
           <label className="mt-3">ইমেইল ঠিকানা (যদি থাকে)</label>
           <input type="email" placeholder="ইমেইল" className="input border-slate-400 rounded h-2/5 w-full my-3 py-2"
-            {...register("email")}
+            {...register("email")} required
           />
 
           <label className="mt-3">মোবাইল নাম্বার ( ইংরেজি ) <span className="text-red-600 text-[20px]">*</span></label>
@@ -119,16 +138,19 @@ const Registration = () => {
           <label className="mt-3">সর্বশেষ রক্ত দানের তারিখ <span className="text-red-600 text-[20px]">*</span></label>
           <div className="flex">
             <select defaultValue="null" {...register("donation_day")} className="input border-slate-400 rounded h-2/5 w-full my-3 py-2">
+              <option defaultValue="1" value="1">1</option>
               {
                 day.map(option => <option key={option.id} value={option.day}>{option.day}</option>)
               }
             </select>
             <select defaultValue="null" {...register("donation_month")} className="input border-slate-400 rounded h-2/5 w-full my-3 py-2">
+              <option defaultValue="January" value="January">January</option>
               {
                 month.map(option => <option key={option.id} value={option.month}>{option.month}</option>)
               }
             </select>
             <select defaultValue="null" {...register("donation_year")} className="input border-slate-400 rounded h-2/5 w-full my-3 py-2">
+              <option defaultValue="2017" value="2017">2017</option>
               {
                 year.map(option => <option key={option.id} value={option.year}>{option.year}</option>)
               }
