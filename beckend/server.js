@@ -15,6 +15,7 @@ app.get("", (req, res) => {
 })
 
 // routes for user
+app.use("/api/user", userRoute);
 
 // connect to MongoDB
 mongoose.set('strictQuery', true)
