@@ -18,6 +18,43 @@ const Thalassemia = () => {
     }
     fetchData();
   }, []);
+  const registationFrom = (e) => {
+    e.preventDefault()
+    const name = e.target?.name?.value
+    const permanentAddressDistrict = e.target?.permanentAddressDistrict?.value
+    const permanentAddress = e.target?.permanentAddress?.value
+    const presentAddressDistrict = e.target?.presentAddressDistrict?.value
+    const presentAddress = e.target?.presentAddress?.value
+    const email = e.target?.email?.value
+    const phone = e.target?.phone?.value
+    const blood = e.target?.blood?.value
+    const day = e.target?.donateLastDate?.value
+    const month = e.target?.donateLastMonth?.value
+    const year = e.target?.donateLastYear?.value
+    const gender = e.target?.gender?.value
+    const password = e.target?.password?.value
+    const confirmPassword = e.target?.confirmPassword?.value
+    if (password !== confirmPassword) {
+      alert('Please write same password')
+    }
+
+    const data = { name, permanentAddressDistrict, permanentAddress, presentAddressDistrict, presentAddress, email, phone, blood, day, month, year, gender, password, confirmPassword }
+    fetch('http://localhost:4000/api/doner', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then(data => {
+        e.target.reset()
+        console.log(data)
+      })
+      .catch(e => {
+        console.log(e)
+      })
+  }
 
   return (
     <>
@@ -261,7 +298,7 @@ const Thalassemia = () => {
               )}
               {isRegister === "no" && (
                 <div>
-                  <form>
+                  <form onSubmit={registationFrom}>
                     <div className="mb-6">
                       <label
                         htmlFor="noRegName"
@@ -274,6 +311,8 @@ const Thalassemia = () => {
                         id="noRegName"
                         className=" border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                         placeholder="নাম"
+                        name='name'
+                        required
                       />
                     </div>
                     <fieldset className="border-dashed border-2 border-gray-900 p-3 text-black">
@@ -290,6 +329,7 @@ const Thalassemia = () => {
                           id="parmanent_district"
                           className=" border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-black focus:border-black block w-full p-2.5 "
                           required
+                          name='permanentAddressDistrict'
                         >
                           {districts.map((district) => (
                             <option
@@ -314,6 +354,8 @@ const Thalassemia = () => {
                           id="parmanent_address"
                           className=" border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                           placeholder="ঠিকানা"
+                          required
+                          name='permanentAddress'
                         />
                       </div>
                     </fieldset>
@@ -331,6 +373,7 @@ const Thalassemia = () => {
                           id="current_district"
                           className=" border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-black focus:border-black block w-full p-2.5 "
                           required
+                          name='presentAddressDistrict'
                         >
                           {districts.map((district) => (
                             <option
@@ -356,6 +399,7 @@ const Thalassemia = () => {
                           className=" border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                           placeholder="ঠিকানা"
                           required
+                          name='presentAddress'
                         />
                       </div>
                     </fieldset>
@@ -371,6 +415,7 @@ const Thalassemia = () => {
                         id="email"
                         className=" border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                         placeholder="ইমেইল"
+                        name='email'
                       />
                     </div>
                     <div className="mb-6">
@@ -387,6 +432,7 @@ const Thalassemia = () => {
                         className=" border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                         placeholder="মোবাইল নাম্বার"
                         required
+                        name='phone'
                       />
                     </div>
                     <div className="mb-6">
@@ -401,6 +447,7 @@ const Thalassemia = () => {
                         id="reg_blood_group"
                         className=" border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-black focus:border-black block w-full p-2.5 "
                         required
+                        name='blood'
                       >
                         {["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"].map(
                           (opt) => (
@@ -425,6 +472,7 @@ const Thalassemia = () => {
                           id="date"
                           className=" border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-black focus:border-black block w-full p-2.5 "
                           required
+                          name='donateLastDate'
                         >
                           {[...new Array(31)].map((opt, i) => (
                             <option key={i} value={i + 1} className="bg-white ">
@@ -437,6 +485,7 @@ const Thalassemia = () => {
                           id="month"
                           className=" border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-black focus:border-black block w-full p-2.5 "
                           required
+                          name='donateLastMonth'
                         >
                           {[
                             "January",
@@ -462,6 +511,7 @@ const Thalassemia = () => {
                           id="year"
                           className=" border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-black focus:border-black block w-full p-2.5 "
                           required
+                          name='donateLastYear'
                         >
                           {["2017", "2018", "2019", "2020", "2022", "2023"].map(
                             (opt, i) => (
@@ -481,6 +531,7 @@ const Thalassemia = () => {
                           value="male"
                           name="gender"
                           className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 "
+                          required
                         />
                         <label
                           htmlFor="gender1"
@@ -496,6 +547,7 @@ const Thalassemia = () => {
                           value="female"
                           name="gender"
                           className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 "
+                          required
                         />
                         <label
                           htmlFor="gender2"
@@ -524,6 +576,7 @@ const Thalassemia = () => {
                         className=" border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                         placeholder="পাসওয়ার্ড"
                         required
+                        name='password'
                       />
                     </div>
                     <div className="mb-6">
@@ -535,11 +588,12 @@ const Thalassemia = () => {
                         <span className="text-primary"> *</span>
                       </label>
                       <input
-                        type="text"
+                        type="password"
                         id="confirm_password"
                         className=" border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                         placeholder="কনফার্ম পাসওয়ার্ড"
                         required
+                        name='confirmPassword'
                       />
                     </div>
                     <button className="px-[44px] py-[9px] bg-black text-white hover:bg-primary duration-1000 font-[700]">
