@@ -5,6 +5,7 @@ const app = express();
 const port = process.env.PORT || 4000;
 const userRoute = require("./routes/user.Route");
 const thalassemiaRoute = require('./routes/thelassemiaRoute')
+const plateletRoute = require('./routes/platelet.route')
 
 /* Application Middleware */
 app.use(express.json());
@@ -18,7 +19,8 @@ app.get("", (req, res) => {
 
 // routes for user
 app.use("/api/user", userRoute);
-
+// routes for platelet
+app.use('/api/v1/platelet', plateletRoute)
 // connect to MongoDB
 mongoose.set('strictQuery', true)
 mongoose
