@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
-import usePlatelet from "../../hooks/usePlatelet";
+// import usePlatelet from "../../hooks/usePlatelet";
 import Navbar from "../Navbar/Navbar";
 
 const AllPlatelet = ({ selectedCus }) => {
-  const [platelets] = usePlatelet();
+  // const [platelets] = usePlatelet();
+  const [platelets, setPlatelet] = useState([]);
+
+  useEffect(() =>{
+       fetch('http://localhost:5000/api/v1/platelet')
+      .then(res =>res.json())
+      .then(data => setPlatelet(data?.data));
+  },[])
 
   return (
     <>

@@ -13,27 +13,29 @@ const PlateletContent = () => {
   const [districts] = useDistrict();
 
   const [platelets] = usePlatelet();
-  const [selectedCus, setSelectedCus] = useState([]);
-  const [searchingGroup, setSearchingGroup] = useState({});
+  // const [selectedCus, setSelectedCus] = useState([]);
+  // const [searchingGroup, setSearchingGroup] = useState({});
+  const [bloodGroup, setBloodGroup] = useState('')
+  const [district, setDistrict] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const bloodGroup = e.target?.bloodGroup?.value;
-    const district = e.target?.district?.value;
+    // const bloodGroup = e.target?.bloodGroup?.value;
+    // const district = e.target?.district?.value;
 
-    const getPlateletCust = platelets.filter(
-      (platelet) =>
-        platelet.bloodGroup === bloodGroup && platelet.district === district
-    );
-    const plateletGroup = platelets.find(
-      (platelet) => platelet.bloodGroup === bloodGroup
-    );
-    if (plateletGroup) {
-      setSearchingGroup(plateletGroup);
-    }
-    if (getPlateletCust) {
-      setSelectedCus(getPlateletCust);
-    }
+    // const getPlateletCust = platelets.filter(
+    //   (platelet) =>
+    //     platelet.bloodGroup === bloodGroup && platelet.district === district
+    // );
+    // const plateletGroup = platelets.find(
+    //   (platelet) => platelet.bloodGroup === bloodGroup
+    // );
+    // if (plateletGroup) {
+    //   setSearchingGroup(plateletGroup);
+    // }
+    // if (getPlateletCust) {
+    //   setSelectedCus(getPlateletCust);
+    // }
   };
   return (
     <>
@@ -52,7 +54,7 @@ const PlateletContent = () => {
                     <select
                       name="bloodGroup"
                       className="platelet-group pl-2 border rounded text-black lg:w-96 lg:h-10 md:w-96 sm:w-60 xs:w-60 md:h-10 sm:h-10 xs:h-10"
-                    >
+                   onChange={(e)=>setBloodGroup(e.target.value)} >
                       <option>A+</option>
                       <option>A-</option>
                       <option>B+</option>
@@ -67,7 +69,7 @@ const PlateletContent = () => {
                     <select
                       name="district"
                       className="platelet-group pl-2 border rounded text-black lg:w-96 lg:h-10 md:w-96 sm:w-60 xs:w-60 md:h-10 sm:h-10 xs:h-10"
-                    >
+                      onChange={(e)=>setDistrict(e.target.value)}>
                       {districts.map((district) => (
                         <option key={district.id}>{district.bn_name}</option>
                       ))}
