@@ -20,9 +20,8 @@ const signupUser = async (req, res) => {
     lastDonationDate,
     role,
     birth_date,
-    password
+    password,
   } = req.body;
-
 
   try {
     const existingEmail = await userModel.findOne({ email });
@@ -45,7 +44,7 @@ const signupUser = async (req, res) => {
       lastDonationDate,
       role,
       birth_date,
-      password: hash
+      password: hash,
     });
     const token = createToken(user._id);
     res.status(200).json({ email, token });
@@ -53,7 +52,6 @@ const signupUser = async (req, res) => {
     res.status(401).json({ error: err.message });
   }
 };
-
 
 // loginUser controller
 const loginUser = async (req, res) => {
@@ -69,6 +67,49 @@ const loginUser = async (req, res) => {
   }
 };
 
+// change password
+const changePassword = async (req, res) => {
+  try {
+    const { oldPassword, newPassword } = req.body;
+    const user = req.user;
+
+    const isMatch = await bcrypt.compare(oldPassword, user.password);
+    if (!isMatch) {
+      throw new Error("Old password doesn't match");
+    }
+
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(newPassword, salt);
+
+    user.password = hashedPassword;
+    await user.save();
+
+    res.send({ success: true, message: "Password changed successfully" });
+  } catch (error) {
+    res.status(400).send({ error: error.message });
+  }
+};
+
+// search user controller
+const searchUser = async (req, res) => {
+  const { present_district, blood_group } = req.query;
+
+  try {
+    const users = await userModel
+      .find({ blood_group, present_district })
+      .select({
+        name: 1,
+        present_district: 1,
+        present_address: 1,
+        number: 1,
+        lastDonationDate: 1,
+        blood_group: 1,
+      });
+    res.status(200).json({ users: users });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
 
 // export donorController to donorRoute.js
-module.exports = { signupUser, loginUser };
+module.exports = { signupUser, loginUser, searchUser, changePassword };
